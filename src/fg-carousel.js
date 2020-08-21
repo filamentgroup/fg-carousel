@@ -116,7 +116,7 @@ class carousel extends HTMLElement {
 		var self=this;
 		var observer = new IntersectionObserver(function( entries ){
 			self.observerCallback( entries );
-		}, {root: self.elem, threshold: .75 });
+		}, {root: self, threshold: .75 });
 		this.querySelectorAll( "." + this.pluginName + "_item" ).forEach(function( item ){
 			observer.observe( item );
 		});
@@ -193,7 +193,7 @@ class carousel extends HTMLElement {
 			clearTimeout(scrolling);
 			scrolling = setTimeout(function(){
 				self.updateSort();
-				if( self.elem.hasAttribute( "data-carousel-nextprev") ){
+				if( self.hasAttribute( "data-carousel-nextprev") ){
 					self.manageArrowState();
 				}
 			},66);
