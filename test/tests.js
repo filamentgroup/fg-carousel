@@ -36,21 +36,6 @@
         ok( carouselA.carousel, "carousel one has carousel method" )
    });
 
-   test(  "button is present", function(){
-    ok( carouselA.querySelector("button"), "carousel has button element" );
-});
-
-
-    test(  "open and close methods trigger events", function(){
-        carouselA.addEventListener("expand", function(e){
-            ok("expand event fired");
-        });
-        carouselA.addEventListener("carousel", function(e){
-            ok("carousel event fired");
-        });
-        carouselA.expand();
-        carouselA.carousel();
-    } );
 
 
 
