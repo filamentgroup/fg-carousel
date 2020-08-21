@@ -372,7 +372,6 @@
   <p class="docs">A carousel carousel with <code>data-carousel-loop</code> will append items to either end as needed so the scroll is infinite. This is recommended for 1-slide-at-a-time carousels.</p>
   
   <fg-carousel data-carousel-nextprev data-carousel-loop>
-    <div class="carousel_nextprev_contain"><!-- optional wrapper to allow for next-prev arrows to relatively position to a direct wrapper of the slides -->
       <div class="carousel_pane_crop">
         <div class="carousel_pane">
           <div class="carousel_items">
