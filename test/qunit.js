@@ -271,7 +271,7 @@
                 }
     
                 if ( bad === 0 ) {
-                    addClass( ol, "qunit-carouseld" );
+                    addClass( ol, "qunit-collapsed" );
                 }
     
                 // `b` initialized at top of scope
@@ -280,8 +280,8 @@
     
                 addEvent(b, "click", function() {
                     var next = b.parentNode.lastChild,
-                        carouseld = hasClass( next, "qunit-carouseld" );
-                    ( carouseld ? removeClass : addClass )( next, "qunit-carouseld" );
+                        collapsed = hasClass( next, "qunit-collapsed" );
+                    ( collapsed ? removeClass : addClass )( next, "qunit-collapsed" );
                 });
     
                 addEvent(b, "dblclick", function( e ) {

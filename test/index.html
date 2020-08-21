@@ -21,11 +21,32 @@
 <body>
 	<div id="qunit"></div>
 	<div id="qunit-fixture">
-		<fg-carousel carouseld>
-			<button>Show/Hide Content</button>
-			<p>This is the carousel content. Currently, it's a <code>p</code> element, but it could be anything really, like a <code>div</code> containing other <code>p</code>'s for example.</p>
+		<fg-carousel data-carousel-nextprev>
+			<div class="carousel_nextprev_contain"><!-- optional wrapper to allow for next-prev arrows to relatively position to a direct wrapper of the slides -->
+			  <div class="carousel_pane_crop">
+				<div class="carousel_pane">
+				  <div class="carousel_items">
+					<div class="carousel_item" id="img-a3">
+					  <img src="imgs/monkey.jpg" alt="">
+					</div>
+					<div class="carousel_item" id="img-b3">
+					  <img src="imgs/large.jpg" alt="">
+					</div>
+					<div class="carousel_item" id="img-d3">
+					  <img src="imgs/interior.jpg" alt="">
+					</div>
+					<div class="carousel_item" id="img-e3">
+					  <img src="imgs/cows.jpg" alt="">
+					</div>
+					<div class="carousel_item" id="img-f3">
+					  <img src="imgs/bike.jpg" alt="">
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			
 		  </fg-carousel>
-
 	</div>
 </body>
 </html>
