@@ -1,0 +1,96 @@
+/* carousel css snap points carousel */
+.carousel {
+    display: block;
+}
+.carousel * {
+box-sizing: border-box; }
+
+.carousel,
+.carousel_nextprev_contain {
+position: relative; }
+
+.carousel:focus {
+/* carousel div receives a tabindex to allow focus for keyboard arrow control */
+outline: none; }
+
+@supports (scroll-snap-type: mandatory) {
+.carousel_pane {
+	/* IE and edge */
+	-ms-overflow-style: none;
+	/* Firefox */
+	scrollbar-width: none; } }
+
+.carousel_pane::-webkit-scrollbar {
+display: none; }
+
+.carousel_pane {
+overflow: auto;
+width: 100%;
+/* keep old API for iOS older than 13, then use new API */
+-webkit-overflow-scrolling: touch;
+/* snap to points */
+scroll-snap-type: mandatory;
+scroll-snap-type: x mandatory;
+/* x interval for snapping (100% of container width) */
+scroll-snap-points-x: repeat(100%);
+position: relative;
+z-index: 0; }
+
+.carousel-sliding .carousel_pane {
+scroll-snap-type: none; }
+
+.carousel_items {
+display: flex;
+flex-flow: row nowrap; }
+
+.carousel_items > *,
+.carousel_item {
+position: relative;
+white-space: normal;
+scroll-snap-align: start;
+box-sizing: border-box;
+padding-right: 1px;
+padding-left: 1px;
+flex: 1 0 auto;
+width: 100%; }
+
+.carousel_items img {
+width: 100%;
+display: block; }
+
+/* next prev arrow selectors */
+.carousel_nextprev-disabled,
+.carousel-hide-nav .carousel_nextprev,
+.carousel-hide-nav .carousel_nav {
+opacity: .3;
+cursor: default; }
+
+.carousel_nav,
+.carousel_nav_inner {
+position: relative;
+margin: 1em 0;
+overflow: auto;
+-webkit-overflow-scrolling: touch;
+display: flex;
+justify-content: flex-start;
+width: 100%; }
+
+.carousel_nav a {
+overflow: hidden;
+border: 1px solid #ddd;
+white-space: normal;
+flex: 0 0 auto;
+vertical-align: middle;
+height: 50px;
+width: auto;
+margin: 0 5px 0 0; }
+
+.carousel_nav a.carousel_nav_item-selected {
+/* selected styles here */
+outline: 1px solid black; }
+
+.carousel_nav img {
+display: block;
+height: 100%;
+width: auto;
+max-width: 100%; }

@@ -1,0 +1,29 @@
+{
+  "version": "0.0.1",
+  "name": "fg-carousel",
+  "homepage": "https://github.com/filamentgroup/fg-carousel/",
+  "author": {
+    "name": "Filament Group",
+    "email": "thegroup@filamentgroup.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/filamentgroup/fg-carousel.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/filamentgroup/fg-carousel/issues/"
+  },
+  "main": "src/fg-carousel.js",
+  "dependencies": {
+    "document-register-element": "^1.14.5",
+    "intersection-observer": "^0.11.0"
+  },
+  "preview_url": "https://filamentgroup.github.io/fg-carousel",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "gulp-babel": "^8.0.0"
+  }
+}

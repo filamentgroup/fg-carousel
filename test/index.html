@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>carousel Test Suite</title>
+	<!-- Load local QUnit. -->
+	<link rel="stylesheet" href="qunit.css" media="screen">
+	<script src="qunit.js"></script>
+    <!-- Load local lib and tests. -->
+	<script>this.customElements||document.write('<script src="../demo/lib/document-register-element.js" defer><\x2fscript>');</script>
+	<script src="../src/fg-carousel.js" type="module"></script>
+	<script src="../demo/es5/fg-carousel.js" defer nomodule></script>
+	<link rel="stylesheet" href="../src/fg-carousel.css">
+
+
+	<script src="./tests.js" defer></script>
+
+	
+</head>
+<body>
+	<div id="qunit"></div>
+	<div id="qunit-fixture">
+		<fg-carousel carouseld>
+			<button>Show/Hide Content</button>
+			<p>This is the carousel content. Currently, it's a <code>p</code> element, but it could be anything really, like a <code>div</code> containing other <code>p</code>'s for example.</p>
+		  </fg-carousel>
+
+	</div>
+</body>
+</html>
