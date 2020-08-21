@@ -384,6 +384,9 @@ class carousel extends HTMLElement {
 			}
 		}
 	}
+	disconnectedCallback(){
+		//if needed
+	}
 }
 
 if ('customElements' in window) {
