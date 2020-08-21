@@ -245,7 +245,6 @@
           <div class="carousel_item" id="img-b4">
             <img src="imgs/large.jpg" alt="">
           </div>
-
           <div class="carousel_item" id="img-d4">
             <img src="imgs/interior.jpg" alt="">
           </div>
@@ -298,7 +297,6 @@
           <div class="carousel_item" id="img-b2">
             <img src="imgs/large.jpg" alt="">
           </div>
- 
           <div class="carousel_item" id="img-d2">
             <img src="imgs/interior.jpg" alt="">
           </div>
@@ -344,7 +342,6 @@
         <div class="carousel_item" id="img-b6">
           <img src="imgs/large.jpg" alt="">
         </div>
-      
         <div class="carousel_item" id="img-d6">
           <img src="imgs/interior.jpg" alt="">
         </div>
@@ -385,7 +382,6 @@
             <div class="carousel_item" id="img-b7">
               <img src="imgs/large.jpg" alt="">
             </div>
-         
             <div class="carousel_item" id="img-d7">
               <img src="imgs/interior.jpg" alt="">
             </div>
