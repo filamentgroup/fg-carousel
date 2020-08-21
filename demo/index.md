@@ -2,7 +2,7 @@
 ---
 
 <script>this.customElements||document.write('<script src="./lib/document-register-element.js" defer><\x2fscript>');</script>
-<script src="lib/intersection-observer.js" defer></script>
+<script src="./lib/intersection-observer.js" defer></script>
 <script src="../src/fg-carousel.js" type="module"></script>
 <script src="./es5/fg-carousel.js" defer nomodule></script>
 <link rel="stylesheet" href="../src/fg-carousel.css">
