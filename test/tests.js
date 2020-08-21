@@ -32,8 +32,6 @@
         ok( carouselA.connectedCallback, "carouselA connected callback is defined")
         ok( carouselA.disconnectedCallback, "carouselA disconnected callback is defined")
 
-        ok( carouselA.expand, "carousel one has expand method" )
-        ok( carouselA.carousel, "carousel one has carousel method" )
    });
 
 
