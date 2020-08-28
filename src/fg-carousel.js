@@ -51,6 +51,7 @@ class carousel extends HTMLElement {
 
 	addNextPrev(){
 		var	nextprev = document.createElement( "ul" );
+		nextprev.classList.add("carousel_nextprev");
 		nextprev.innerHTML = `
 			<li class="carousel_nextprev_item"><button class="carousel_nextprev_prev">Prev</button></li>
 			<li class="carousel_nextprev_item"><button class="carousel_nextprev_next">Next</button></li>
