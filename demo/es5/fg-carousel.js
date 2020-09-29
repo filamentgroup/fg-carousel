@@ -56,8 +56,8 @@ var carousel = /*#__PURE__*/function (_HTMLElement) {
       });
     }
   }, {
-    key: "init",
-    value: function init() {
+    key: "_init",
+    value: function _init() {
       this.pluginName = "carousel";
       var self = this;
       this.navActiveClass = this.pluginName + "_nav_item-selected";

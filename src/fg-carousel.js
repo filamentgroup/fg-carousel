@@ -11,7 +11,7 @@ class carousel extends HTMLElement {
 		}
 		this._observer.observe(this, { childList: true });
 	}
-	init(){
+	_init(){
 		this.pluginName = "carousel";
 		var self = this;
 		this.navActiveClass = this.pluginName + "_nav_item-selected";
