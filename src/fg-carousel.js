@@ -2,8 +2,16 @@
 class carousel extends HTMLElement {
 	constructor(){
 		super();
+		this._init = this._init.bind(this);
+    	this._observer = new MutationObserver(this._init);
 	}
 	connectedCallback(){
+		if (this.children.length) {
+			this._init();
+		}
+		this._observer.observe(this, { childList: true });
+	}
+	init(){
 		this.pluginName = "carousel";
 		var self = this;
 		this.navActiveClass = this.pluginName + "_nav_item-selected";

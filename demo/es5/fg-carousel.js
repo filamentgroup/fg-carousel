@@ -34,14 +34,30 @@ var carousel = /*#__PURE__*/function (_HTMLElement) {
   var _super = _createSuper(carousel);
 
   function carousel() {
+    var _this;
+
     _classCallCheck(this, carousel);
 
-    return _super.call(this);
+    _this = _super.call(this);
+    _this._init = _this._init.bind(_assertThisInitialized(_this));
+    _this._observer = new MutationObserver(_this._init);
+    return _this;
   }
 
   _createClass(carousel, [{
     key: "connectedCallback",
     value: function connectedCallback() {
+      if (this.children.length) {
+        this._init();
+      }
+
+      this._observer.observe(this, {
+        childList: true
+      });
+    }
+  }, {
+    key: "init",
+    value: function init() {
       this.pluginName = "carousel";
       var self = this;
       this.navActiveClass = this.pluginName + "_nav_item-selected";
@@ -89,6 +105,7 @@ var carousel = /*#__PURE__*/function (_HTMLElement) {
     key: "addNextPrev",
     value: function addNextPrev() {
       var nextprev = document.createElement("ul");
+      nextprev.classList.add("carousel_nextprev");
       nextprev.innerHTML = "\n\t\t\t<li class=\"carousel_nextprev_item\"><button class=\"carousel_nextprev_prev\">Prev</button></li>\n\t\t\t<li class=\"carousel_nextprev_item\"><button class=\"carousel_nextprev_next\">Next</button></li>\n\t\t";
       var nextprevContain = this.querySelector("." + this.pluginName + "_nextprev_contain");
 
@@ -444,6 +461,10 @@ var carousel = /*#__PURE__*/function (_HTMLElement) {
           this["goto"](prev);
         }
       }
+    }
+  }, {
+    key: "disconnectedCallback",
+    value: function disconnectedCallback() {//if needed
     }
   }]);
 
