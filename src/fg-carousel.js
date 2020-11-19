@@ -3,7 +3,7 @@ class carousel extends HTMLElement {
 	constructor(){
 		super();
 		this._init = this._init.bind(this);
-    	this._observer = new MutationObserver(this._init);
+		this._observer = new MutationObserver(this._init);
 	}
 	connectedCallback(){
 		if (this.children.length) {
@@ -43,6 +43,11 @@ class carousel extends HTMLElement {
 				self.nextAutoplay();
 			});
 		}
+		// make sure changes to the item list are tracked
+		this._observeItemChanges = new MutationObserver( function(){
+			self.updateIntObserveList();
+		} );
+		this._observeItemChanges.observe(this, { childList: true, subtree: true });
 	}
 	makeEvent( evtName ){
 		if( typeof window.CustomEvent === "function" ){
@@ -123,14 +128,20 @@ class carousel extends HTMLElement {
 
 	observeItems(){
 		var self=this;
-		var observer = new IntersectionObserver(function( entries ){
+		this._intObserver = new IntersectionObserver(function( entries ){
 			self.observerCallback( entries );
 		}, {root: self, threshold: .75 });
-		this.querySelectorAll( "." + this.pluginName + "_item" ).forEach(function( item ){
-			observer.observe( item );
-		});
-		observer.takeRecords();
+		this.updateIntObserveList();
+		this._intObserver.takeRecords();
 	}
+
+	updateIntObserveList(){
+		var self = this;
+		this.querySelectorAll( "." + this.pluginName + "_item" ).forEach(function( item ){
+			self._intObserver.observe( item );
+		});
+	}
+
 
 	// get the carousel_item elements whose left offsets fall within the scroll pane.
 	activeItems(){

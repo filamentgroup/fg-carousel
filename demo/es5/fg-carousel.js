@@ -85,7 +85,17 @@ var carousel = /*#__PURE__*/function (_HTMLElement) {
         setTimeout(function () {
           self.nextAutoplay();
         });
-      }
+      } // make sure changes to the item list are tracked
+
+
+      this._observeItemChanges = new MutationObserver(function () {
+        self.updateIntObserveList();
+      });
+
+      this._observeItemChanges.observe(this, {
+        childList: true,
+        subtree: true
+      });
     }
   }, {
     key: "makeEvent",
@@ -177,16 +187,23 @@ var carousel = /*#__PURE__*/function (_HTMLElement) {
     key: "observeItems",
     value: function observeItems() {
       var self = this;
-      var observer = new IntersectionObserver(function (entries) {
+      this._intObserver = new IntersectionObserver(function (entries) {
         self.observerCallback(entries);
       }, {
         root: self,
         threshold: .75
       });
+      this.updateIntObserveList();
+
+      this._intObserver.takeRecords();
+    }
+  }, {
+    key: "updateIntObserveList",
+    value: function updateIntObserveList() {
+      var self = this;
       this.querySelectorAll("." + this.pluginName + "_item").forEach(function (item) {
-        observer.observe(item);
+        self._intObserver.observe(item);
       });
-      observer.takeRecords();
     } // get the carousel_item elements whose left offsets fall within the scroll pane.
 
   }, {
