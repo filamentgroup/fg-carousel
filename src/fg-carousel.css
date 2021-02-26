@@ -73,21 +73,22 @@ overflow: auto;
 -webkit-overflow-scrolling: touch;
 display: flex;
 justify-content: flex-start;
-width: 100%; }
+width: 100%; gap: 10px; }
 
 .carousel_nav a {
 overflow: hidden;
-border: 1px solid #ddd;
+border: 5px solid #fff;
 white-space: normal;
 flex: 0 0 auto;
+display: block;
 vertical-align: middle;
 height: 50px;
 width: auto;
-margin: 0 5px 0 0; }
+margin: 0; }
 
 .carousel_nav a.carousel_nav_item-selected {
 /* selected styles here */
-outline: 1px solid black; }
+border-color: lightblue; }
 
 .carousel_nav img {
 display: block;
