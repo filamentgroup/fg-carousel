@@ -233,35 +233,7 @@
           </div>
     </fg-carousel>
 
-<h2 class="docs" id="autoplay"> Auto-play carousel example</h2>
-<p class="docs">By setting the <code>data-carousel-autoplay</code> attribute on the <code>class="carousel"</code> element to a natural number value carousel will automatically rotate through the images. The value represents a the millisecond delay between item transitions. In the example below we have <code>data-carousel-autoplay="2000"</code></p>
-<p class="docs">You can also set the attribute on carousel_item elements to get individual timing.</p>
-<fg-carousel data-carousel-nextprev data-carousel-autoplay="4000">
-    <div class="carousel_nextprev_contain"><!-- optional wrapper to allow for next-prev arrows to relatively position to a direct wrapper of the slides -->
-        <div class="carousel_pane">
-            <div class="carousel_items">
-                <div class="carousel_item" id="img-a3">
-                <img src="imgs/andrea-cau-nV7GJmSq3zc-unsplash.jpg" alt="Photo of city scene by Andrea Cau" />
-                </div>
-                <div class="carousel_item" id="img-b3">
-                <img src="imgs/henning-witzel-ukvgqriuOgo-unsplash.jpg" alt="Photo of city scene by Henning Witzel" />
-                </div>
-                <div class="carousel_item" id="img-c3">
-                <img src="imgs/jonathan-riley-VW8MUbHyxCU-unsplash.jpg" alt="Photo of city scene by Jonathan Riley" />
-                </div>
-                <div class="carousel_item" id="img-d3">
-                <img src="imgs/jonathan-roger-LY1eyQMFeyo-unsplash.jpg" alt="Photo of city scene by Jonathan Roger" />
-                </div>
-            </div>
-            </div>
-        </div>
-        <div class="carousel_nav">
-            <a href="#img-a3"><img src="imgs/thmb-andrea-cau-nV7GJmSq3zc-unsplash.jpg" alt="" /></a>
-            <a href="#img-b3"><img src="imgs/thmb-henning-witzel-ukvgqriuOgo-unsplash.jpg" alt="" /></a>
-            <a href="#img-c3"><img src="imgs/thmb-jonathan-riley-VW8MUbHyxCU-unsplash.jpg" alt="" /></a>
-            <a href="#img-d3"><img src="imgs/thmb-jonathan-roger-LY1eyQMFeyo-unsplash.jpg" alt="" /></a>
-        </div>
-  </fg-carousel>
+
 
 <style>
   
@@ -313,7 +285,7 @@
   }
   </code></pre>
 
-<h2 class="docs" id="looping">Example with endless looping (experimental feature)</h2>
+<h2 class="docs" id="looping">Example with endless looping</h2>
 <p class="docs">A carousel carousel with <code>data-carousel-loop</code> will append items to either end as needed so the scroll is infinite. This is recommended for 1-slide-at-a-time carousels.</p>
 
 <fg-carousel data-carousel-nextprev="" data-carousel-loop="">
@@ -342,6 +314,37 @@
         <a href="#img-d3"><img src="imgs/thmb-jonathan-roger-LY1eyQMFeyo-unsplash.jpg" alt="" /></a>
     </div>
 </fg-carousel>
+
+
+<h2 class="docs" id="autoplay"> Auto-play carousel example (also looping, optionally)</h2>
+<p class="docs">By setting the <code>data-carousel-autoplay</code> attribute on the <code>class="carousel"</code> element to a natural number value carousel will automatically rotate through the images. The value represents a the millisecond delay between item transitions. In the example below we have <code>data-carousel-autoplay="2000"</code></p>
+<p class="docs">You can also set the attribute on carousel_item elements to get individual timing.</p>
+<fg-carousel data-carousel-nextprev data-carousel-loop data-carousel-autoplay="3000">
+    <div class="carousel_nextprev_contain"><!-- optional wrapper to allow for next-prev arrows to relatively position to a direct wrapper of the slides -->
+        <div class="carousel_pane">
+            <div class="carousel_items">
+                <div class="carousel_item" id="img-a3">
+                <img src="imgs/andrea-cau-nV7GJmSq3zc-unsplash.jpg" alt="Photo of city scene by Andrea Cau" />
+                </div>
+                <div class="carousel_item" id="img-b3">
+                <img src="imgs/henning-witzel-ukvgqriuOgo-unsplash.jpg" alt="Photo of city scene by Henning Witzel" />
+                </div>
+                <div class="carousel_item" id="img-c3">
+                <img src="imgs/jonathan-riley-VW8MUbHyxCU-unsplash.jpg" alt="Photo of city scene by Jonathan Riley" />
+                </div>
+                <div class="carousel_item" id="img-d3">
+                <img src="imgs/jonathan-roger-LY1eyQMFeyo-unsplash.jpg" alt="Photo of city scene by Jonathan Roger" />
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="carousel_nav">
+            <a href="#img-a3"><img src="imgs/thmb-andrea-cau-nV7GJmSq3zc-unsplash.jpg" alt="" /></a>
+            <a href="#img-b3"><img src="imgs/thmb-henning-witzel-ukvgqriuOgo-unsplash.jpg" alt="" /></a>
+            <a href="#img-c3"><img src="imgs/thmb-jonathan-riley-VW8MUbHyxCU-unsplash.jpg" alt="" /></a>
+            <a href="#img-d3"><img src="imgs/thmb-jonathan-roger-LY1eyQMFeyo-unsplash.jpg" alt="" /></a>
+        </div>
+  </fg-carousel>
 
 
 ## About
