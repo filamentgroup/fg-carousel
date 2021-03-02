@@ -32,7 +32,9 @@ class carousel extends HTMLElement {
 			});
 		}
 		
-		this.setAttribute("tabindex",0);
+		this.slider.setAttribute("tabindex",0);
+		this.slider.setAttribute("aria-orientation", "horizontal");
+		this.slider.setAttribute("role", "region" );
 		this.bindEvents();
 
 		this.dispatchEvent( this.initEvent );

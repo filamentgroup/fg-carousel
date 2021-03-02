@@ -105,7 +105,7 @@
 <p class="docs">This carousel starts with HTML containing slides and thumbnail links, which are regular anchor links to each slide's corresponding ID attribute. It also has next/prev links that are automatically added through the addition of a <code>data-carousel-nextprev</code> attribute. </p>
 <fg-carousel data-carousel-nextprev="">
     <div class="carousel_nextprev_contain"><!-- optional wrapper to allow for next-prev arrows to relatively position to a direct wrapper of the slides -->
-    <div class="carousel_pane">
+    <div class="carousel_pane" aria-label="Series of images of city scenes">
         <div class="carousel_items">
             <div class="carousel_item" id="img-a1">
             <img src="imgs/andrea-cau-nV7GJmSq3zc-unsplash.jpg" alt="Photo of city scene by Andrea Cau" />
@@ -156,7 +156,7 @@
 
 <fg-carousel data-carousel-nextprev="" class="breakpointsexample">
     <div class="carousel_nextprev_contain"><!-- optional wrapper to allow for next-prev arrows to relatively position to a direct wrapper of the slides -->
-    <div class="carousel_pane">
+    <div class="carousel_pane" aria-label="Series of images of city scenes">
         <div class="carousel_items">
           <div class="carousel_item" id="img-a2">
             <img src="imgs/andrea-cau-nV7GJmSq3zc-unsplash.jpg" alt="Photo of city scene by Andrea Cau" />
@@ -208,7 +208,7 @@
   <p class="docs">You can also set the attribute on carousel_item elements to get individual timing.</p>
   <fg-carousel data-carousel-nextprev>
       <div class="carousel_nextprev_contain"><!-- optional wrapper to allow for next-prev arrows to relatively position to a direct wrapper of the slides -->
-          <div class="carousel_pane">
+          <div class="carousel_pane" aria-label="Series of images of city scenes">
               <div class="carousel_items">
                   <div class="carousel_item" id="img-a3b">
                   <img src="imgs/andrea-cau-nV7GJmSq3zc-unsplash.jpg" alt="Photo of city scene by Andrea Cau" />
@@ -250,7 +250,7 @@
 
 <fg-carousel class="revealexample" data-carousel-nextprev="">
     <div class="carousel_nextprev_contain"><!-- optional wrapper to allow for next-prev arrows to relatively position to a direct wrapper of the slides -->
-        <div class="carousel_pane">
+        <div class="carousel_pane" aria-label="Series of images of city scenes">
             <div class="carousel_items">
                 <div class="carousel_item" id="img-a4">
                 <img src="imgs/andrea-cau-nV7GJmSq3zc-unsplash.jpg" alt="Photo of city scene by Andrea Cau" />
@@ -290,7 +290,7 @@
 
 <fg-carousel data-carousel-nextprev="" data-carousel-loop="">
 <div class="carousel_nextprev_contain"><!-- optional wrapper to allow for next-prev arrows to relatively position to a direct wrapper of the slides -->
-    <div class="carousel_pane">
+    <div class="carousel_pane" aria-label="Series of images of city scenes">
         <div class="carousel_items">
             <div class="carousel_item" id="img-a5">
             <img src="imgs/andrea-cau-nV7GJmSq3zc-unsplash.jpg" alt="Photo of city scene by Andrea Cau" />
@@ -321,7 +321,7 @@
 <p class="docs">You can also set the attribute on carousel_item elements to get individual timing.</p>
 <fg-carousel data-carousel-nextprev data-carousel-loop data-carousel-autoplay="3000">
     <div class="carousel_nextprev_contain"><!-- optional wrapper to allow for next-prev arrows to relatively position to a direct wrapper of the slides -->
-        <div class="carousel_pane">
+        <div class="carousel_pane" aria-label="Series of images of city scenes">
             <div class="carousel_items">
                 <div class="carousel_item" id="img-a3">
                 <img src="imgs/andrea-cau-nV7GJmSq3zc-unsplash.jpg" alt="Photo of city scene by Andrea Cau" />
