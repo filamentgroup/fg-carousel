@@ -130,6 +130,84 @@
     </div>
   </fg-carousel>
 
+
+
+
+<h2 class="docs">Similar example with interactive and focusable slide content</h2>
+<p class="docs">This carousel starts with HTML containing slides and thumbnail links, which are regular anchor links to each slide's corresponding ID attribute. It also has next/prev links that are automatically added through the addition of a <code>data-carousel-nextprev</code> attribute. </p>
+<fg-carousel data-carousel-nextprev="" class="marketing-example">
+    <div class="carousel_nextprev_contain"><!-- optional wrapper to allow for next-prev arrows to relatively position to a direct wrapper of the slides -->
+    <div class="carousel_pane" aria-label="Series of images of city scenes">
+        <div class="carousel_items">
+            <div class="carousel_item" id="img-a1b">
+            <img src="imgs/andrea-cau-nV7GJmSq3zc-unsplash.jpg" alt="Photo of city scene by Andrea Cau" />
+            <a href="#">
+              <h4>A sample marketing message!</h4>
+              <p>Followed by a sub header...</p>
+            </a>
+            </div>
+            <div class="carousel_item" id="img-b1b">
+            <img src="imgs/henning-witzel-ukvgqriuOgo-unsplash.jpg" alt="Photo of city scene by Henning Witzel" />
+            <a href="#">
+              <h4>A second marketing message!</h4>
+              <p>Followed by a sub header...</p>
+            </a>
+            </div>
+            <div class="carousel_item" id="img-c1b">
+            <img src="imgs/jonathan-riley-VW8MUbHyxCU-unsplash.jpg" alt="Photo of city scene by Jonathan Riley" />
+            <a href="#">
+              <h4>A third marketing message!</h4>
+              <p>Followed by a sub header...</p>
+            </a>
+            </div>
+            <div class="carousel_item" id="img-d1b">
+            <img src="imgs/jonathan-roger-LY1eyQMFeyo-unsplash.jpg" alt="Photo of city scene by Jonathan Roger" />
+            <a href="#">
+              <h4>One more marketing message!</h4>
+              <p>Followed by a sub header...</p>
+            </a>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="carousel_nav">
+        <a href="#img-a1b"><img src="imgs/thmb-andrea-cau-nV7GJmSq3zc-unsplash.jpg" alt="" /></a>
+        <a href="#img-b1b"><img src="imgs/thmb-henning-witzel-ukvgqriuOgo-unsplash.jpg" alt="" /></a>
+        <a href="#img-c1b"><img src="imgs/thmb-jonathan-riley-VW8MUbHyxCU-unsplash.jpg" alt="" /></a>
+        <a href="#img-d1b"><img src="imgs/thmb-jonathan-roger-LY1eyQMFeyo-unsplash.jpg" alt="" /></a>
+    </div>
+  </fg-carousel>
+
+  <style>
+  .marketing-example .carousel_item {
+    position: relative;
+  }
+  .marketing-example .carousel_item a {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0,0,0,.8);
+    left: 0;
+    right: 0;
+    padding: 1em;
+    text-decoration: none;
+  }
+  .marketing-example .carousel_item a:hover,
+  .marketing-example .carousel_item a:focus {
+    background-color: rgba(0,0,0,1);
+  }
+  .marketing-example .carousel_item h4 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0 0 .3em;
+    color: #fff;
+  }
+  .marketing-example .carousel_item p {
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: yellow;
+  }
+  </style>
+
 <style>
   
       /* breakpoints example */
