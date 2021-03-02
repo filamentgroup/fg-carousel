@@ -108,15 +108,19 @@
     <div class="carousel_pane">
         <div class="carousel_items">
             <div class="carousel_item" id="img-a1">
+            <a href="#">Test link 1</a>
             <img src="imgs/andrea-cau-nV7GJmSq3zc-unsplash.jpg" alt="Photo of city scene by Andrea Cau" />
             </div>
             <div class="carousel_item" id="img-b1">
+            <a href="#">Test link 2</a>
             <img src="imgs/henning-witzel-ukvgqriuOgo-unsplash.jpg" alt="Photo of city scene by Henning Witzel" />
             </div>
             <div class="carousel_item" id="img-c1">
+            <a href="#">Test link 3</a>
             <img src="imgs/jonathan-riley-VW8MUbHyxCU-unsplash.jpg" alt="Photo of city scene by Jonathan Riley" />
             </div>
             <div class="carousel_item" id="img-d1">
+            <a href="#">Test link 4</a>
             <img src="imgs/jonathan-roger-LY1eyQMFeyo-unsplash.jpg" alt="Photo of city scene by Jonathan Roger" />
             </div>
         </div>
