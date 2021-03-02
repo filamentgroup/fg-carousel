@@ -185,7 +185,7 @@
   .marketing-example .carousel_item a {
     position: absolute;
     bottom: 0;
-    background: rgba(0,0,0,.8);
+    background: rgba(0,0,0,.5);
     left: 0;
     right: 0;
     padding: 1em;
@@ -193,7 +193,8 @@
   }
   .marketing-example .carousel_item a:hover,
   .marketing-example .carousel_item a:focus {
-    background-color: rgba(0,0,0,1);
+    background-color: rgba(0,0,0,.9);
+    outline: none;
   }
   .marketing-example .carousel_item h4 {
     font-size: 1.8rem;
