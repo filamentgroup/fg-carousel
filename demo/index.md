@@ -134,7 +134,7 @@
 
 
 <h2 class="docs">Similar example with interactive and focusable slide content</h2>
-<p class="docs">This carousel starts with HTML containing slides and thumbnail links, which are regular anchor links to each slide's corresponding ID attribute. It also has next/prev links that are automatically added through the addition of a <code>data-carousel-nextprev</code> attribute. </p>
+<p class="docs">This carousel contains focusable (linked) content to demonstrate how content can be accessed via a keyboard by tabbing between the slide links.</p>
 <fg-carousel data-carousel-nextprev="" class="marketing-example">
     <div class="carousel_nextprev_contain"><!-- optional wrapper to allow for next-prev arrows to relatively position to a direct wrapper of the slides -->
     <div class="carousel_pane" aria-label="Series of images of city scenes">
@@ -194,12 +194,13 @@
   .marketing-example .carousel_item a:hover,
   .marketing-example .carousel_item a:focus {
     background-color: rgba(0,0,0,.9);
+    text-decoration: underline;
     outline: none;
   }
   .marketing-example .carousel_item h4 {
     font-size: 1.8rem;
     font-weight: bold;
-    margin: 0 0 .3em;
+    margin: 0 0 .1em;
     color: #fff;
   }
   .marketing-example .carousel_item p {
