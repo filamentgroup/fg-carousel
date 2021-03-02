@@ -12,7 +12,7 @@ position: relative; }
 .carousel:focus {
 /* carousel div receives a tabindex to allow focus for keyboard arrow control */
 outline: none;
-box-shadow: 0 0 0 5px rgba(0,0,0,.8) }
+box-shadow: 0 0 5px rgba(0,0,0,.2); }
 
 @supports (scroll-snap-type: mandatory) {
 .carousel_pane {
