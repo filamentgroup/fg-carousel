@@ -250,15 +250,31 @@
           <div class="carousel_item" id="img-d2">
             <img src="imgs/jonathan-roger-LY1eyQMFeyo-unsplash.jpg" alt="Photo of city scene by Jonathan Roger" />
           </div>
+          <div class="carousel_item" id="img-e2">
+            <img src="imgs/andrea-cau-nV7GJmSq3zc-unsplash.jpg" alt="Photo of city scene by Andrea Cau" />
+          </div>
+          <div class="carousel_item" id="img-f2">
+            <img src="imgs/henning-witzel-ukvgqriuOgo-unsplash.jpg" alt="Photo of city scene by Henning Witzel" />
+          </div>
+          <div class="carousel_item" id="img-g2">
+            <img src="imgs/jonathan-riley-VW8MUbHyxCU-unsplash.jpg" alt="Photo of city scene by Jonathan Riley" />
+          </div>
+          <div class="carousel_item" id="img-h2">
+            <img src="imgs/jonathan-roger-LY1eyQMFeyo-unsplash.jpg" alt="Photo of city scene by Jonathan Roger" />
+          </div>
         </div>
       </div>
     </div>
     <div class="carousel_nav carousel_nav-dots">
-        <a href="#img-a2">Scroll carousel to slide 1 of 4</a>
-        <a href="#img-b2">Scroll carousel to slide 2 of 4</a>
-        <a href="#img-c2">Scroll carousel to slide 3 of 4</a>
-        <a href="#img-d2">Scroll carousel to slide 4 of 4</a>
-    </div>
+          <a href="#img-a2">Scroll carousel to slide 1 of 8</a>
+          <a href="#img-b2">Scroll carousel to slide 2 of 8</a>
+          <a href="#img-c2">Scroll carousel to slide 3 of 8</a>
+          <a href="#img-d2">Scroll carousel to slide 4 of 8</a>
+          <a href="#img-e2">Scroll carousel to slide 5 of 8</a>
+          <a href="#img-f2">Scroll carousel to slide 6 of 8</a>
+          <a href="#img-g2">Scroll carousel to slide 7 of 8</a>
+          <a href="#img-h2">Scroll carousel to slide 8 of 8</a>
+        </div>
   </fg-carousel>
 
 <h3 class="docs" id="css">CSS for this example</h3>
@@ -344,15 +360,31 @@
                 <div class="carousel_item" id="img-d4">
                 <img src="imgs/jonathan-roger-LY1eyQMFeyo-unsplash.jpg" alt="Photo of city scene by Jonathan Roger" />
                 </div>
+                <div class="carousel_item" id="img-e4">
+            <img src="imgs/andrea-cau-nV7GJmSq3zc-unsplash.jpg" alt="Photo of city scene by Andrea Cau" />
+            </div>
+            <div class="carousel_item" id="img-f4">
+              <img src="imgs/henning-witzel-ukvgqriuOgo-unsplash.jpg" alt="Photo of city scene by Henning Witzel" />
+            </div>
+            <div class="carousel_item" id="img-g4">
+              <img src="imgs/jonathan-riley-VW8MUbHyxCU-unsplash.jpg" alt="Photo of city scene by Jonathan Riley" />
+            </div>
+            <div class="carousel_item" id="img-h4">
+            <img src="imgs/jonathan-roger-LY1eyQMFeyo-unsplash.jpg" alt="Photo of city scene by Jonathan Roger" />
+          </div>
             </div>
             </div>
         </div>
         <div class="carousel_nav carousel_nav-dots">
-        <a href="#img-a4">Scroll carousel to slide 1 of 4</a>
-        <a href="#img-b4">Scroll carousel to slide 2 of 4</a>
-        <a href="#img-c4">Scroll carousel to slide 3 of 4</a>
-        <a href="#img-d4">Scroll carousel to slide 4 of 4</a>
-    </div>
+          <a href="#img-a4">Scroll carousel to slide 1 of 8</a>
+          <a href="#img-b4">Scroll carousel to slide 2 of 8</a>
+          <a href="#img-c4">Scroll carousel to slide 3 of 8</a>
+          <a href="#img-d4">Scroll carousel to slide 4 of 8</a>
+          <a href="#img-e4">Scroll carousel to slide 5 of 8</a>
+          <a href="#img-f4">Scroll carousel to slide 6 of 8</a>
+          <a href="#img-g4">Scroll carousel to slide 7 of 8</a>
+          <a href="#img-h4">Scroll carousel to slide 8 of 8</a>
+        </div>
 </fg-carousel>
 
 <h3 class="docs" id="css">CSS for this example</h3>
