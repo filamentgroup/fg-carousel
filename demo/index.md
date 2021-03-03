@@ -232,9 +232,9 @@
     </style>
 
 <h2 class="docs" id="breakpoints">Example w/ multiple slides showing</h2>
-<p class="docs">This example plays nicely with CSS breakpoints to show a different number of slides depending on the viewport size. To use breakpoints in this way, for back compat, be sure to include Snap Points that correspond to the item widths. <a href="#css">See CSS for this example</a></p>
+<p class="docs">This example plays nicely with CSS breakpoints to show a different number of slides depending on the viewport size. To use breakpoints in this way, for back compat, be sure to include Snap Points that correspond to the item widths. <a href="#css">See CSS for this example</a>. This example also uses dynamic navigation thumbnails ("data-carousel-dynamicnav") since the number of slides showing at any time varies, so dynamic thumbnails highlight one "viewport" at a time.</p>
 
-<fg-carousel data-carousel-nextprev="" class="breakpointsexample">
+<fg-carousel data-carousel-nextprev="" data-carousel-dynamicnav class="breakpointsexample">
     <div class="carousel_nextprev_contain"><!-- optional wrapper to allow for next-prev arrows to relatively position to a direct wrapper of the slides -->
     <div class="carousel_pane" aria-label="Series of images of city scenes">
         <div class="carousel_items">
@@ -253,11 +253,11 @@
         </div>
       </div>
     </div>
-    <div class="carousel_nav">
-      <a href="#img-a2"><img src="imgs/thmb-andrea-cau-nV7GJmSq3zc-unsplash.jpg" alt="" /></a>
-      <a href="#img-b2"><img src="imgs/thmb-henning-witzel-ukvgqriuOgo-unsplash.jpg" alt="" /></a>
-      <a href="#img-c2"><img src="imgs/thmb-jonathan-riley-VW8MUbHyxCU-unsplash.jpg" alt="" /></a>
-      <a href="#img-d2"><img src="imgs/thmb-jonathan-roger-LY1eyQMFeyo-unsplash.jpg" alt="" /></a>
+    <div class="carousel_nav carousel_nav-dots">
+        <a href="#img-a2">Scroll carousel to slide 1 of 4</a>
+        <a href="#img-b2">Scroll carousel to slide 2 of 4</a>
+        <a href="#img-c2">Scroll carousel to slide 3 of 4</a>
+        <a href="#img-d2">Scroll carousel to slide 4 of 4</a>
     </div>
   </fg-carousel>
 
@@ -326,9 +326,9 @@
   
   </style>
 
-<h2 class="docs" id="reveal">Example w/ multiple slides and revealing on partially</h2>
+<h2 class="docs" id="reveal">Example w/ multiple slides and revealing on partially. It uses dynamic navigation thumbnails ("data-carousel-dynamicnav") since the number of slides showing at any time varies.</h2>
 
-<fg-carousel class="revealexample" data-carousel-nextprev="">
+<fg-carousel class="revealexample" data-carousel-dynamicnav data-carousel-nextprev="">
     <div class="carousel_nextprev_contain"><!-- optional wrapper to allow for next-prev arrows to relatively position to a direct wrapper of the slides -->
         <div class="carousel_pane" aria-label="Series of images of city scenes">
             <div class="carousel_items">
@@ -347,12 +347,12 @@
             </div>
             </div>
         </div>
-        <div class="carousel_nav">
-            <a href="#img-a4"><img src="imgs/thmb-andrea-cau-nV7GJmSq3zc-unsplash.jpg" alt="" /></a>
-            <a href="#img-b4"><img src="imgs/thmb-henning-witzel-ukvgqriuOgo-unsplash.jpg" alt="" /></a>
-            <a href="#img-c4"><img src="imgs/thmb-jonathan-riley-VW8MUbHyxCU-unsplash.jpg" alt="" /></a>
-            <a href="#img-d4"><img src="imgs/thmb-jonathan-roger-LY1eyQMFeyo-unsplash.jpg" alt="" /></a>
-        </div>
+        <div class="carousel_nav carousel_nav-dots">
+        <a href="#img-a4">Scroll carousel to slide 1 of 4</a>
+        <a href="#img-b4">Scroll carousel to slide 2 of 4</a>
+        <a href="#img-c4">Scroll carousel to slide 3 of 4</a>
+        <a href="#img-d4">Scroll carousel to slide 4 of 4</a>
+    </div>
 </fg-carousel>
 
 <h3 class="docs" id="css">CSS for this example</h3>

@@ -31,6 +31,11 @@ class carousel extends HTMLElement {
 				self.manageArrowState();
 			});
 		}
+
+		if( this.hasAttribute( "data-carousel-dynamicnav" ) ){
+			this.manageDynamicNav();
+
+		}
 		
 		this.slider.setAttribute("tabindex",0);
 		this.slider.setAttribute("aria-orientation", "horizontal");
@@ -210,6 +215,12 @@ class carousel extends HTMLElement {
 			});
 		}
 
+		if( this.hasAttribute( "data-carousel-dynamicnav" ) ){
+			window.addEventListener("resize", function( e ){
+				self.manageDynamicNav();
+			});
+		}
+
 		var scrolling;
 		this.slider.addEventListener("scroll", function( e ){
 			clearTimeout(scrolling);
@@ -248,6 +259,23 @@ class carousel extends HTMLElement {
 
 		window.addEventListener("resize", resizeUpdates);
 
+	}
+
+	manageDynamicNav(){
+		var pane = this.slider;
+		var scrollWidth = pane.scrollWidth;
+		var width = pane.offsetWidth;
+		var regions = scrollWidth / width;
+		//this.setAttribute( "data-carousel-pages", regions.toFixed(3) )
+		var allSlides = this.getItems();
+		var allThumbs = this.nav.querySelectorAll("a");
+		var iterator = Math.round( allSlides.length / regions );
+		for( var i = 0; i < allSlides.length; i++ ){
+			allThumbs[i].setAttribute("disabled", true)
+		}
+		for( var i = 0; i < allSlides.length; i+=iterator ){
+			allThumbs[i].removeAttribute("disabled")
+		}
 	}
 
 	manageArrowState(){

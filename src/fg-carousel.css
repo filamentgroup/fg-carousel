@@ -86,7 +86,9 @@ vertical-align: middle;
 height: 50px;
 width: auto;
 margin: 0; }
-
+.carousel_nav a[disabled=true] {
+	display: none !important;
+}
 .carousel_nav a.carousel_nav_item-selected {
 /* selected styles here */
 border-color: lightblue; }
