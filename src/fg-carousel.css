@@ -86,6 +86,7 @@ vertical-align: middle;
 height: 50px;
 width: auto;
 margin: 0; }
+/* disabled state comes from pagination mode */
 .carousel_nav a[disabled=true] {
 	display: none !important;
 }

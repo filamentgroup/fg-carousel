@@ -232,9 +232,9 @@
     </style>
 
 <h2 class="docs" id="breakpoints">Example w/ multiple slides showing</h2>
-<p class="docs">This example plays nicely with CSS breakpoints to show a different number of slides depending on the viewport size. To use breakpoints in this way, for back compat, be sure to include Snap Points that correspond to the item widths. <a href="#css">See CSS for this example</a>. This example also uses dynamic navigation thumbnails ("data-carousel-dynamicnav") since the number of slides showing at any time varies, so dynamic thumbnails highlight one "viewport" at a time.</p>
+<p class="docs">This example plays nicely with CSS breakpoints to show a different number of slides depending on the viewport size. To use breakpoints in this way, for back compat, be sure to include Snap Points that correspond to the item widths. <a href="#css">See CSS for this example</a>.</p>
 
-<fg-carousel data-carousel-nextprev="" data-carousel-dynamicnav class="breakpointsexample">
+<fg-carousel data-carousel-nextprev="" class="breakpointsexample">
     <div class="carousel_nextprev_contain"><!-- optional wrapper to allow for next-prev arrows to relatively position to a direct wrapper of the slides -->
     <div class="carousel_pane" aria-label="Series of images of city scenes">
         <div class="carousel_items">
@@ -274,6 +274,54 @@
           <a href="#img-f2">Scroll carousel to slide 6 of 8</a>
           <a href="#img-g2">Scroll carousel to slide 7 of 8</a>
           <a href="#img-h2">Scroll carousel to slide 8 of 8</a>
+        </div>
+  </fg-carousel>
+
+
+
+<h2 class="docs" id="breakpoints">Multiple slides with pagination</h2>
+<p class="docs">This example is the same as the last, but it uses dynamic pagination for thumbnails and arrows through the "data-carousel-paginated" attribute. Pagination will cause the thumbnails and arrows to treat the visible slides as one unit, advancing as a whole, which tends to work better for multiple slides. If the number of slides showing at any time varies, such as in this example, the number of dots may change across breakpoints. Dynamic thumbnails highlight one "viewport" at a time.</p>
+
+<fg-carousel data-carousel-nextprev="" data-carousel-paginated class="breakpointsexample">
+    <div class="carousel_nextprev_contain"><!-- optional wrapper to allow for next-prev arrows to relatively position to a direct wrapper of the slides -->
+    <div class="carousel_pane" aria-label="Series of images of city scenes">
+        <div class="carousel_items">
+          <div class="carousel_item" id="img-a2a">
+            <img src="imgs/andrea-cau-nV7GJmSq3zc-unsplash.jpg" alt="Photo of city scene by Andrea Cau" />
+          </div>
+          <div class="carousel_item" id="img-b2a">
+            <img src="imgs/henning-witzel-ukvgqriuOgo-unsplash.jpg" alt="Photo of city scene by Henning Witzel" />
+          </div>
+          <div class="carousel_item" id="img-c2a">
+            <img src="imgs/jonathan-riley-VW8MUbHyxCU-unsplash.jpg" alt="Photo of city scene by Jonathan Riley" />
+          </div>
+          <div class="carousel_item" id="img-d2a">
+            <img src="imgs/jonathan-roger-LY1eyQMFeyo-unsplash.jpg" alt="Photo of city scene by Jonathan Roger" />
+          </div>
+          <div class="carousel_item" id="img-e2a">
+            <img src="imgs/andrea-cau-nV7GJmSq3zc-unsplash.jpg" alt="Photo of city scene by Andrea Cau" />
+          </div>
+          <div class="carousel_item" id="img-f2a">
+            <img src="imgs/henning-witzel-ukvgqriuOgo-unsplash.jpg" alt="Photo of city scene by Henning Witzel" />
+          </div>
+          <div class="carousel_item" id="img-g2a">
+            <img src="imgs/jonathan-riley-VW8MUbHyxCU-unsplash.jpg" alt="Photo of city scene by Jonathan Riley" />
+          </div>
+          <div class="carousel_item" id="img-h2a">
+            <img src="imgs/jonathan-roger-LY1eyQMFeyo-unsplash.jpg" alt="Photo of city scene by Jonathan Roger" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel_nav carousel_nav-dots">
+          <a href="#img-a2a">Scroll carousel to slide 1 of 8</a>
+          <a href="#img-b2a">Scroll carousel to slide 2 of 8</a>
+          <a href="#img-c2a">Scroll carousel to slide 3 of 8</a>
+          <a href="#img-d2a">Scroll carousel to slide 4 of 8</a>
+          <a href="#img-e2a">Scroll carousel to slide 5 of 8</a>
+          <a href="#img-f2a">Scroll carousel to slide 6 of 8</a>
+          <a href="#img-g2a">Scroll carousel to slide 7 of 8</a>
+          <a href="#img-h2a">Scroll carousel to slide 8 of 8</a>
         </div>
   </fg-carousel>
 
@@ -342,9 +390,9 @@
   
   </style>
 
-<h2 class="docs" id="reveal">Example w/ multiple slides and revealing on partially. It uses dynamic navigation thumbnails ("data-carousel-dynamicnav") since the number of slides showing at any time varies.</h2>
+<h2 class="docs" id="reveal">Example w/ multiple slides and revealing on partially. It uses dynamic navigation thumbnails ("data-carousel-paginated") since the number of slides showing at any time varies.</h2>
 
-<fg-carousel class="revealexample" data-carousel-dynamicnav data-carousel-nextprev="">
+<fg-carousel class="revealexample" data-carousel-paginated data-carousel-nextprev="">
     <div class="carousel_nextprev_contain"><!-- optional wrapper to allow for next-prev arrows to relatively position to a direct wrapper of the slides -->
         <div class="carousel_pane" aria-label="Series of images of city scenes">
             <div class="carousel_items">

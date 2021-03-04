@@ -32,9 +32,10 @@ class carousel extends HTMLElement {
 			});
 		}
 
-		if( this.hasAttribute( "data-carousel-dynamicnav" ) ){
-			this.manageDynamicNav();
+		this.paginated = this.hasAttribute( "data-carousel-paginated" );
 
+		if( this.paginated ){
+			this.manageDynamicNav();
 		}
 		
 		this.slider.setAttribute("tabindex",0);
@@ -215,7 +216,7 @@ class carousel extends HTMLElement {
 			});
 		}
 
-		if( this.hasAttribute( "data-carousel-dynamicnav" ) ){
+		if( this.paginated ){
 			window.addEventListener("resize", function( e ){
 				self.manageDynamicNav();
 			});
@@ -269,11 +270,11 @@ class carousel extends HTMLElement {
 		//this.setAttribute( "data-carousel-pages", regions.toFixed(3) )
 		var allSlides = this.getItems();
 		var allThumbs = this.nav.querySelectorAll("a");
-		var iterator = Math.round( allSlides.length / regions );
+		this.iterator = Math.round( allSlides.length / regions );
 		for( var i = 0; i < allSlides.length; i++ ){
 			allThumbs[i].setAttribute("disabled", true)
 		}
-		for( var i = 0; i < allSlides.length; i+=iterator ){
+		for( var i = 0; i < allSlides.length; i+=this.iterator ){
 			allThumbs[i].removeAttribute("disabled")
 		}
 	}
@@ -418,6 +419,15 @@ class carousel extends HTMLElement {
 		var currentActive =  this.activeItems()[0];
 		if(currentActive){
 			var next = currentActive.nextElementSibling;
+			if( this.paginated ){
+				var activeNav = this.querySelector("." + this.navActiveClass);
+				var nextNav = activeNav.nextElementSibling;
+				while( nextNav.hasAttribute("disabled") ){
+					nextNav = nextNav.nextElementSibling;
+				}
+				
+				next = this.querySelector(nextNav.getAttribute('href'))
+			}
 			if( next ){
 				this.goto( next );
 			}
@@ -429,6 +439,14 @@ class carousel extends HTMLElement {
 		var currentActive =  this.activeItems()[0];
 		if( currentActive ){
 			var prev = currentActive.previousElementSibling;
+			if( this.paginated ){
+				var activeNav = this.querySelector("." + this.navActiveClass);
+				var nextNav = activeNav.previousElementSibling;
+				while( nextNav.hasAttribute("disabled") ){
+					nextNav = nextNav.previousElementSibling;
+				}
+				prev = this.querySelector(nextNav.getAttribute('href'))
+			}
 			if( prev ){
 				this.goto( prev );
 			}
