@@ -390,8 +390,9 @@
   
   </style>
 
-<h2 class="docs" id="reveal">Example w/ multiple slides and revealing on partially.</h3>
-<p>If you set slides to a width that doesn't divide evenly in 100, you'll have slides that partially reveal, which can be a nice affordance to suggest to the user that there's more content to see. Again, this example uses pagination as well ("data-carousel-paginated"), which tends to work best when multiple slides show at a time.</h2>
+<h2 class="docs" id="reveal">Example w/ multiple slides and revealing on partially.</h2>
+
+<p class="docs">If you set slides to a width that doesn't divide evenly in 100, you'll have slides that partially reveal, which can be a nice affordance to suggest to the user that there's more content to see. Again, this example uses pagination as well ("data-carousel-paginated"), which tends to work best when multiple slides show at a time.</p>
 
 <fg-carousel class="revealexample" data-carousel-paginated data-carousel-nextprev="">
     <div class="carousel_nextprev_contain"><!-- optional wrapper to allow for next-prev arrows to relatively position to a direct wrapper of the slides -->
