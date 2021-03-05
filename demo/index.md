@@ -140,27 +140,15 @@ Quick links to examples:
                   </div>
                   <div class="carousel_item" id="img-e3b">
             <img src="imgs/chuttersnap-ZRFzHWwGm3g-unsplash.jpg" alt="Photo of city scene by Chuttersnap" />
-            <div class="demo-caption">
-              <p>city scene by <a href="#">Chuttersnap</a></p>
-            </div>
             </div>
             <div class="carousel_item" id="img-f3b">
             <img src="imgs/a-k-kNG1xaJklfA-unsplash.jpg" alt="Photo of city scene by @djluvrocks" />
-            <div class="demo-caption">
-              <p>city scene by <a href="#">@djluvrocks</a></p>
-            </div>
             </div>
             <div class="carousel_item" id="img-g3b">
             <img src="imgs/lance-anderson-PcCQgQ6KGkI-unsplash.jpg" alt="Photo of city scene by Lance Anderson" />
-            <div class="demo-caption">
-              <p>city scene by <a href="#">Lance Anderson</a></p>
-            </div>
             </div>
             <div class="carousel_item" id="img-h3b">
             <img src="imgs/anthony-intraversato-xr43RescWSA-unsplash.jpg" alt="Photo of city scene by Anthony Intraversato" />
-            <div class="demo-caption">
-              <p>city scene by <a href="#">Anthony Intraversato</a></p>
-            </div>
             </div>
               </div>
               </div>
@@ -238,15 +226,6 @@ Quick links to examples:
               </div>
               </div>
           </div>
-    <div class="carousel_nav carousel_nav-dots">
-          <a href="#img-a21">Scroll carousel to slide 1 of 8</a>
-          <a href="#img-b21">Scroll carousel to slide 2 of 8</a>
-          <a href="#img-c21">Scroll carousel to slide 3 of 8</a>
-          <a href="#img-d21">Scroll carousel to slide 4 of 8</a>
-          <a href="#img-e21">Scroll carousel to slide 5 of 8</a>
-          <a href="#img-f21">Scroll carousel to slide 6 of 8</a>
-          <a href="#img-g21">Scroll carousel to slide 7 of 8</a>
-        </div>
   </fg-carousel>
 
 <h3 class="docs" id="css">CSS for this example</h3>
@@ -295,7 +274,7 @@ Quick links to examples:
   
   </style>
 
-<h2 class="docs" id="reveal">Example w/ multiple slides and partially reveals.</h2>
+<h2 class="docs" id="reveal">Example with partial slide reveals.</h2>
 
 <p class="docs">If you set slides to a width that doesn't divide evenly in the visible viewport, you'll have slides that partially reveal, which can be a nice affordance to suggest to the user that there's more content to see. </p>
 
