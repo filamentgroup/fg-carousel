@@ -179,33 +179,32 @@ Quick links to examples:
 
 
 <style>
-  
-      /* breakpoints example */
-      @media (min-width: 40em){
-        .breakpointsexample .carousel_item {
-          width: 50%;
-        }
-        .breakpointsexample .carousel_pane {
-          scroll-snap-points-x: repeat(50%);
-        }
-      }
-      @media (min-width: 50em){
-        .breakpointsexample .carousel_item {
-          width: 33.333%;
-        }
-        .breakpointsexample .carousel_pane {
-          scroll-snap-points-x: repeat(33.33333%);
-        }
-      }
-      @media (min-width: 60em){
-        .breakpointsexample .carousel_item {
-          width: 25%;
-        }
-        .breakpointsexample .carousel_pane {
-          scroll-snap-points-x: repeat(25%);
-        }
-      }
-    </style>
+/* breakpoints example */
+@media (min-width: 40em){
+  .breakpointsexample .carousel_item {
+    width: 50%;
+  }
+  .breakpointsexample .carousel_pane {
+    scroll-snap-points-x: repeat(50%);
+  }
+}
+@media (min-width: 50em){
+  .breakpointsexample .carousel_item {
+    width: 33.333%;
+  }
+  .breakpointsexample .carousel_pane {
+    scroll-snap-points-x: repeat(33.33333%);
+  }
+}
+@media (min-width: 60em){
+  .breakpointsexample .carousel_item {
+    width: 25%;
+  }
+  .breakpointsexample .carousel_pane {
+    scroll-snap-points-x: repeat(25%);
+  }
+}
+</style>
 
 <h2 class="docs" id="breakpoints">Example w/ varying number of slides showing depending on viewport size</h2>
 <p class="docs">This example plays nicely with CSS breakpoints to show a different number of slides depending on the viewport size. To use breakpoints in this way, for back compat, be sure to include Snap Points that correspond to the item widths. <a href="#css">See CSS for this example</a>.</p>
@@ -239,8 +238,8 @@ Quick links to examples:
             <img src="imgs/anthony-intraversato-xr43RescWSA-unsplash.jpg" alt="Photo of city scene by Anthony Intraversato" />
             </div>
         </div>
-        </div>
-          </div>
+      </div>
+    </div>
     <div class="carousel_nav carousel_nav-dots">
           <a href="#img-a2">Scroll carousel to slide 1 of 8</a>
           <a href="#img-b2">Scroll carousel to slide 2 of 8</a>
@@ -255,15 +254,6 @@ Quick links to examples:
 
 <h3 class="docs" id="css">CSS for this example</h3>
 <pre class="docs language-css"><code class="docs language-css">
-  /* cars example */
-  .cars-example .carousel_item {
-  width: 375px;
-  }
-  </code></pre>
-
-
-
-<style>
 /* breakpoints example */
 @media (min-width: 40em){
   .breakpointsexample .carousel_item {
@@ -289,7 +279,11 @@ Quick links to examples:
     scroll-snap-points-x: repeat(25%);
   }
 }
-</style>
+</code></pre>
+
+
+
+
 
 
 
@@ -363,6 +357,14 @@ Quick links to examples:
 
 
 
+
+<style>
+/* cars example */
+.cars-example .carousel_item {
+width: 500px;
+max-width: 100%;
+}
+</style>
 
 <h2 class="docs" id="pagination">Fixed width slides with pagination</h2>
 <p class="docs">This example is similar to prior examples that show multiple slides, but it has fixed-width slides, rather than slides that fill a percent of the viewport. It also uses dynamic pagination for thumbnails and arrows through the "data-carousel-paginated" attribute. Pagination will cause the thumbnails and arrows to treat the visible slides as one unit, advancing as a whole, which tends to work better for multiple slides. Regardless of whether widths are fixed or fluid, if the number of slides showing at any time varies such as in this example, the number of dots may change across breakpoints. Dynamic thumbnails highlight one "viewport" at a time.</p>
