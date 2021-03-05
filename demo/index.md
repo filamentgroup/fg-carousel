@@ -442,8 +442,8 @@ max-width: 100%;
 
 
  
-<h2 class="docs" id="autoplay"> Auto-play carousel example (also looping, optionally)</h2>
-<p class="docs">By setting the <code>data-carousel-autoplay</code> attribute on the <code>class="carousel"</code> element to a natural number value carousel will automatically rotate through the images. The value represents a the millisecond delay between item transitions. In the example below we have <code>data-carousel-autoplay="2000"</code></p>
+<h2 class="docs" id="autoplay"> Auto-play carousel example</h2>
+<p class="docs">By setting the <code>data-carousel-autoplay</code> attribute on the <code>fg-carousel</code> element to a natural number value carousel will automatically rotate through the images. The value represents a the millisecond delay between item transitions. In the example below we have <code>data-carousel-autoplay="4000"</code></p>
 <p class="docs">You can also set the attribute on carousel_item elements to get individual timing.</p>
 <fg-carousel data-carousel-nextprev data-carousel-autoplay="4000">
     <div class="carousel_nextprev_contain"><!-- optional wrapper to allow for next-prev arrows to relatively position to a direct wrapper of the slides -->
