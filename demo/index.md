@@ -86,10 +86,10 @@ Quick links to examples:
         <a href="#img-b1b"><img src="imgs/thmb-henning-witzel-ukvgqriuOgo-unsplash.jpg" alt="" /></a>
         <a href="#img-c1b"><img src="imgs/thmb-jonathan-riley-VW8MUbHyxCU-unsplash.jpg" alt="" /></a>
         <a href="#img-d1b"><img src="imgs/thmb-jonathan-roger-LY1eyQMFeyo-unsplash.jpg" alt="" /></a>
-        <a href="#img-e1b"><img src="imgs/thmb-chuttersnap-ZRFzHWwGm3g-unsplash.jpg" alt="" /></a>
-        <a href="#img-f1b"><img src="imgs/thmb-a-k-kNG1xaJklfA-unsplash.jpg" alt="" /></a>
-        <a href="#img-g1b"><img src="imgs/thmb-lance-anderson-PcCQgQ6KGkI-unsplash.jpg" alt="" /></a>
-        <a href="#img-h1b"><img src="imgs/thmb-anthony-intraversato-xr43RescWSA-unsplash.jpg" alt="" /></a>
+        <a href="#img-e1b"><img src="imgs/thumb-chuttersnap-ZRFzHWwGm3g-unsplash.jpg" alt="" /></a>
+        <a href="#img-f1b"><img src="imgs/thumb-a-k-kNG1xaJklfA-unsplash.jpg" alt="" /></a>
+        <a href="#img-g1b"><img src="imgs/thumb-lance-anderson-PcCQgQ6KGkI-unsplash.jpg" alt="" /></a>
+        <a href="#img-h1b"><img src="imgs/thumb-anthony-intraversato-xr43RescWSA-unsplash.jpg" alt="" /></a>
     </div>
   </fg-carousel>
 
