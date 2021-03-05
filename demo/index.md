@@ -238,12 +238,9 @@ Quick links to examples:
             <div class="carousel_item" id="img-h2">
             <img src="imgs/anthony-intraversato-xr43RescWSA-unsplash.jpg" alt="Photo of city scene by Anthony Intraversato" />
             </div>
-              </div>
-              </div>
-          </div>
         </div>
-      </div>
-    </div>
+        </div>
+          </div>
     <div class="carousel_nav carousel_nav-dots">
           <a href="#img-a2">Scroll carousel to slide 1 of 8</a>
           <a href="#img-b2">Scroll carousel to slide 2 of 8</a>
@@ -374,33 +371,30 @@ Quick links to examples:
     <div class="carousel_nextprev_contain cars-example"><!-- optional wrapper to allow for next-prev arrows to relatively position to a direct wrapper of the slides -->
     <div class="carousel_pane" aria-label="Series of images of city scenes">
         <div class="carousel_items">
-          <div class="carousel_item" id="img-a2a>
+          <div class="carousel_item" id="img-a2a">
           <img src="imgs/joshua-koblin-eqW1MPinEV4-unsplash.jpg" alt="picture of a car by joshua koblin">
           </div>
-          <div class="carousel_item" id="img-b2a>
+          <div class="carousel_item" id="img-b2a">
           <img src="imgs/marcus-p-oUBjd22gF6w-unsplash.jpg" alt="picture of a car by marcus p">
           </div>
-          <div class="carousel_item" id="img-c2a>
+          <div class="carousel_item" id="img-c2a">
           <img src="imgs/joey-banks-YApiWyp0lqo-unsplash.jpg" alt="picture of a car by joey banks">
           </div>
-          <div class="carousel_item" id="img-d2a>
+          <div class="carousel_item" id="img-d2a">
           <img src="imgs/lance-asper-N9Pf2J656aQ-unsplash.jpg" alt="picture of a car by lance asper">
           </div>
-          <div class="carousel_item" id="img-e2a>
+          <div class="carousel_item" id="img-e2a">
           <img src="imgs/john-vicente-CMzmQNU-DGE-unsplash.jpg" alt="picture of a car by john vicente">
           </div>
-          <div class="carousel_item" id="img-f2a>
+          <div class="carousel_item" id="img-f2a">
           <img src="imgs/benjamin-child-7Cdw956mZ4w-unsplash.jpg" alt="picture of a car by benjamin child">
           </div>
-          <div class="carousel_item" id="img-g2a>
+          <div class="carousel_item" id="img-g2a">
           <img src="imgs/matt-antonioli-3akA0XDg1_g-unsplash.jpg" alt="picture of a car by matt antonioli">
           </div>
               </div>
               </div>
           </div>
-        </div>
-      </div>
-    </div>
     <div class="carousel_nav carousel_nav-dots">
           <a href="#img-a2a">Scroll carousel to slide 1 of 8</a>
           <a href="#img-b2a">Scroll carousel to slide 2 of 8</a>
