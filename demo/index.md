@@ -405,16 +405,16 @@ max-width: 100%;
           <a href="#img-e2a">Scroll carousel to slide 5 of 8</a>
           <a href="#img-f2a">Scroll carousel to slide 6 of 8</a>
           <a href="#img-g2a">Scroll carousel to slide 7 of 8</a>
-          <a href="#img-h2a">Scroll carousel to slide 8 of 8</a>
         </div>
   </fg-carousel>
 
 <h3 class="docs" id="css">CSS for this example</h3>
 <pre class="docs language-css"><code class="docs language-css">
   /* cars example */
-  .cars-example .carousel_item {
-  width: 375px;
-  }
+.cars-example .carousel_item {
+  width: 500px;
+  max-width: 100%;
+}
   </code></pre>
 
 
