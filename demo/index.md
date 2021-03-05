@@ -102,13 +102,13 @@ Quick links to examples:
     background: rgba(0,0,0,.8);
     left: 0;
     right: 0;
-    padding: .8em 1em;
+    padding: 1em 2em;
   }
   .marketing-example .demo-caption p {
     font-size: 1rem;
     font-weight: normal;
     color: #fff;
-
+    margin: 0;
   }
   .marketing-example .demo-caption a {
     text-decoration: underline;
