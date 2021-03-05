@@ -99,19 +99,20 @@ Quick links to examples:
   .marketing-example .demo-caption {
     position: absolute;
     bottom: 0;
-    background: rgba(0,0,0,.5);
+    background: rgba(0,0,0,.8);
     left: 0;
     right: 0;
-    padding: 1em;
+    padding: .8em 1em;
   }
   .marketing-example .demo-caption p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: normal;
     color: #fff;
 
   }
   .marketing-example .demo-caption a {
     text-decoration: underline;
+    color: #fff;
   }
   </style>
 

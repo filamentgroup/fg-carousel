@@ -158,7 +158,7 @@ class carousel extends HTMLElement {
 
 	// sort an item to either end to ensure there's always something to advance to
 	updateSort() {
-		if( !this.closest( "[data-carousel-loop]" ) ){
+		if( this.loopDisabled || !this.closest( "[data-carousel-loop]" ) ){
 			return;
 		}
 		var scrollWidth = this.slider.scrollWidth;
@@ -200,13 +200,16 @@ class carousel extends HTMLElement {
 			self.stopAutoplay();
 		});
 		this.addEventListener("mouseenter", function( e ){
-			self.stopAutoplay();
+			//self.stopAutoplay();
 		});
 		this.addEventListener("pointerdown", function( e ){
 			self.stopAutoplay();
 		});
 		this.addEventListener("focus", function( e ){
 			self.stopAutoplay();
+		});
+		this.pane.addEventListener( "focus", function(){
+			self.loopDisabled = true;
 		});
 		
 		// cleanup on resize 
