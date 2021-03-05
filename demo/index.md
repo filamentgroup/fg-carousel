@@ -16,7 +16,8 @@ Quick links to examples:
 - [Dots](#dots)
 - [Varying width breakpoints](#breakpoints)
 - [Partial Reveals](#reveal)
-- [Fixed widths and Pagination](#pagination)
+- [Fixed width slides](#fixed)
+- [Paginated navigation](#pagination)
 - [Autoplay](#autoplay)
 - [Looping](#looping)
 
@@ -300,9 +301,9 @@ Quick links to examples:
 
 <h2 class="docs" id="reveal">Example w/ multiple slides and partially reveals.</h2>
 
-<p class="docs">If you set slides to a width that doesn't divide evenly in the visible viewport, you'll have slides that partially reveal, which can be a nice affordance to suggest to the user that there's more content to see. Again, this example uses pagination as well ("data-carousel-paginated"), which tends to work best when multiple slides show at a time.</p>
+<p class="docs">If you set slides to a width that doesn't divide evenly in the visible viewport, you'll have slides that partially reveal, which can be a nice affordance to suggest to the user that there's more content to see. </p>
 
-<fg-carousel class="revealexample" data-carousel-paginated data-carousel-nextprev="">
+<fg-carousel class="revealexample" data-carousel-nextprev="">
     <div class="carousel_nextprev_contain"><!-- optional wrapper to allow for next-prev arrows to relatively position to a direct wrapper of the slides -->
         <div class="carousel_pane" aria-label="Series of images of city scenes">
             <div class="carousel_items">
@@ -366,11 +367,11 @@ max-width: 100%;
 }
 </style>
 
-<h2 class="docs" id="pagination">Fixed width slides with pagination</h2>
+<h2 class="docs" id="fixed">Fixed width slides</h2>
 <p class="docs">This example is similar to prior examples that show multiple slides, but it has fixed-width slides, rather than slides that fill a percent of the viewport. It also uses dynamic pagination for thumbnails and arrows through the "data-carousel-paginated" attribute. Pagination will cause the thumbnails and arrows to treat the visible slides as one unit, advancing as a whole, which tends to work better for multiple slides. Regardless of whether widths are fixed or fluid, if the number of slides showing at any time varies such as in this example, the number of dots may change across breakpoints. Dynamic thumbnails highlight one "viewport" at a time.</p>
 
-<fg-carousel data-carousel-nextprev="" data-carousel-paginated class="breakpointsexample">
-    <div class="carousel_nextprev_contain cars-example"><!-- optional wrapper to allow for next-prev arrows to relatively position to a direct wrapper of the slides -->
+<fg-carousel data-carousel-nextprev="" class="cars-example">
+    <div class="carousel_nextprev_contain"><!-- optional wrapper to allow for next-prev arrows to relatively position to a direct wrapper of the slides -->
     <div class="carousel_pane" aria-label="Series of images of city scenes">
         <div class="carousel_items">
           <div class="carousel_item" id="img-a2a">
@@ -416,6 +417,52 @@ max-width: 100%;
   max-width: 100%;
 }
   </code></pre>
+
+
+
+
+<h2 class="docs" id="pagination">Responsive slide widths with paginated navigation</h2>
+<p class="docs">This example is similar to prior examples that show multiple slides, but it uses dynamic pagination for thumbnails and arrows through the "data-carousel-paginated" attribute. Pagination will cause the thumbnails and arrows to treat the visible slides as one unit, advancing as a whole, which tends to work better for multiple slides. The number of dots in the nav may change across breakpoints to match the number of "pages" that are visible.</p>
+
+<fg-carousel data-carousel-nextprev="" data-carousel-paginated class="breakpointsexample">
+    <div class="carousel_nextprev_contain"><!-- optional wrapper to allow for next-prev arrows to relatively position to a direct wrapper of the slides -->
+    <div class="carousel_pane" aria-label="Series of images of city scenes">
+        <div class="carousel_items">
+          <div class="carousel_item" id="img-a20">
+          <img src="imgs/joshua-koblin-eqW1MPinEV4-unsplash.jpg" alt="picture of a car by joshua koblin">
+          </div>
+          <div class="carousel_item" id="img-b20">
+          <img src="imgs/marcus-p-oUBjd22gF6w-unsplash.jpg" alt="picture of a car by marcus p">
+          </div>
+          <div class="carousel_item" id="img-c20">
+          <img src="imgs/joey-banks-YApiWyp0lqo-unsplash.jpg" alt="picture of a car by joey banks">
+          </div>
+          <div class="carousel_item" id="img-d20">
+          <img src="imgs/lance-asper-N9Pf2J656aQ-unsplash.jpg" alt="picture of a car by lance asper">
+          </div>
+          <div class="carousel_item" id="img-e20">
+          <img src="imgs/john-vicente-CMzmQNU-DGE-unsplash.jpg" alt="picture of a car by john vicente">
+          </div>
+          <div class="carousel_item" id="img-f20">
+          <img src="imgs/benjamin-child-7Cdw956mZ4w-unsplash.jpg" alt="picture of a car by benjamin child">
+          </div>
+          <div class="carousel_item" id="img-g20">
+          <img src="imgs/matt-antonioli-3akA0XDg1_g-unsplash.jpg" alt="picture of a car by matt antonioli">
+          </div>
+              </div>
+              </div>
+          </div>
+    <div class="carousel_nav carousel_nav-dots">
+          <a href="#img-a20">Scroll carousel to slide 1 of 8</a>
+          <a href="#img-b20">Scroll carousel to slide 2 of 8</a>
+          <a href="#img-c20">Scroll carousel to slide 3 of 8</a>
+          <a href="#img-d20">Scroll carousel to slide 4 of 8</a>
+          <a href="#img-e20">Scroll carousel to slide 5 of 8</a>
+          <a href="#img-f20">Scroll carousel to slide 6 of 8</a>
+          <a href="#img-g20">Scroll carousel to slide 7 of 8</a>
+        </div>
+  </fg-carousel>
+
 
 
 
