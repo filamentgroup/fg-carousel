@@ -208,7 +208,7 @@ class carousel extends HTMLElement {
 		this.addEventListener("focus", function( e ){
 			self.stopAutoplay();
 		});
-		this.pane.addEventListener( "focus", function(){
+		this.slider.addEventListener( "focus", function(){
 			self.loopDisabled = true;
 		});
 		
