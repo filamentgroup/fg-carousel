@@ -477,14 +477,14 @@ max-width: 100%;
             </div>
         </div>
         <div class="carousel_nav">
-          <a href="#img-a3"><img src="imgs/thmb-andrea-cau-nV7GJmSq3zc-unsplash.jpg" alt="" /></a>
-          <a href="#img-b3"><img src="imgs/thmb-henning-witzel-ukvgqriuOgo-unsplash.jpg" alt="" /></a>
-          <a href="#img-c3"><img src="imgs/thmb-jonathan-riley-VW8MUbHyxCU-unsplash.jpg" alt="" /></a>
-          <a href="#img-d3"><img src="imgs/thmb-jonathan-roger-LY1eyQMFeyo-unsplash.jpg" alt="" /></a>
-          <a href="#img-e3"><img src="imgs/thumb-chuttersnap-ZRFzHWwGm3g-unsplash.jpg" alt="" /></a>
-          <a href="#img-f3"><img src="imgs/thumb-a-k-kNG1xaJklfA-unsplash.jpg" alt="" /></a>
-          <a href="#img-g3"><img src="imgs/thumb-lance-anderson-PcCQgQ6KGkI-unsplash.jpg" alt="" /></a>
-          <a href="#img-h3"><img src="imgs/thumb-anthony-intraversato-xr43RescWSA-unsplash.jpg" alt="" /></a>
+          <a href="#img-a3"><img src="imgs/thmb-andrea-cau-nV7GJmSq3zc-unsplash.jpg" alt="Scroll carousel to slide 1" /></a>
+          <a href="#img-b3"><img src="imgs/thmb-henning-witzel-ukvgqriuOgo-unsplash.jpg" alt="Scroll carousel to slide 2" /></a>
+          <a href="#img-c3"><img src="imgs/thmb-jonathan-riley-VW8MUbHyxCU-unsplash.jpg" alt="Scroll carousel to slide 3" /></a>
+          <a href="#img-d3"><img src="imgs/thmb-jonathan-roger-LY1eyQMFeyo-unsplash.jpg" alt="Scroll carousel to slide 4" /></a>
+          <a href="#img-e3"><img src="imgs/thumb-chuttersnap-ZRFzHWwGm3g-unsplash.jpg" alt="Scroll carousel to slide 5" /></a>
+          <a href="#img-f3"><img src="imgs/thumb-a-k-kNG1xaJklfA-unsplash.jpg" alt="Scroll carousel to slide 6" /></a>
+          <a href="#img-g3"><img src="imgs/thumb-lance-anderson-PcCQgQ6KGkI-unsplash.jpg" alt="Scroll carousel to slide 7" /></a>
+          <a href="#img-h3"><img src="imgs/thumb-anthony-intraversato-xr43RescWSA-unsplash.jpg" alt="Scroll carousel to slide 8" /></a>
       </div>
   </fg-carousel> 
 
@@ -513,10 +513,10 @@ max-width: 100%;
         </div>
     </div>
     <div class="carousel_nav">
-        <a href="#img-a5"><img src="imgs/thmb-andrea-cau-nV7GJmSq3zc-unsplash.jpg" alt="" /></a>
-        <a href="#img-b5"><img src="imgs/thmb-henning-witzel-ukvgqriuOgo-unsplash.jpg" alt="" /></a>
-        <a href="#img-c5"><img src="imgs/thmb-jonathan-riley-VW8MUbHyxCU-unsplash.jpg" alt="" /></a>
-        <a href="#img-d5"><img src="imgs/thmb-jonathan-roger-LY1eyQMFeyo-unsplash.jpg" alt="" /></a>
+        <a href="#img-a5"><img src="imgs/thmb-andrea-cau-nV7GJmSq3zc-unsplash.jpg" alt="Scroll Carousel to slide 1" /></a>
+        <a href="#img-b5"><img src="imgs/thmb-henning-witzel-ukvgqriuOgo-unsplash.jpg" alt="Scroll Carousel to slide 2" /></a>
+        <a href="#img-c5"><img src="imgs/thmb-jonathan-riley-VW8MUbHyxCU-unsplash.jpg" alt="Scroll Carousel to slide 3" /></a>
+        <a href="#img-d5"><img src="imgs/thmb-jonathan-roger-LY1eyQMFeyo-unsplash.jpg" alt="Scroll Carousel to slide 4" /></a>
     </div>
 </fg-carousel>
 
