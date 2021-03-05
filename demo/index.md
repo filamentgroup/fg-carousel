@@ -210,46 +210,42 @@ Quick links to examples:
 <h2 class="docs" id="breakpoints">Example w/ varying number of slides showing depending on viewport size</h2>
 <p class="docs">This example plays nicely with CSS breakpoints to show a different number of slides depending on the viewport size. To use breakpoints in this way, for back compat, be sure to include Snap Points that correspond to the item widths. <a href="#css">See CSS for this example</a>.</p>
 
-<fg-carousel data-carousel-nextprev="" class="breakpointsexample">
+<fg-carousel data-carousel-nextprev class="breakpointsexample">
     <div class="carousel_nextprev_contain"><!-- optional wrapper to allow for next-prev arrows to relatively position to a direct wrapper of the slides -->
     <div class="carousel_pane" aria-label="Series of images of city scenes">
         <div class="carousel_items">
-          <div class="carousel_item" id="img-a2">
-            <img src="imgs/andrea-cau-nV7GJmSq3zc-unsplash.jpg" alt="Photo of city scene by Andrea Cau" />
+          <div class="carousel_item" id="img-a21">
+          <img src="imgs/joshua-koblin-eqW1MPinEV4-unsplash.jpg" alt="picture of a car by joshua koblin">
           </div>
-          <div class="carousel_item" id="img-b2">
-            <img src="imgs/henning-witzel-ukvgqriuOgo-unsplash.jpg" alt="Photo of city scene by Henning Witzel" />
+          <div class="carousel_item" id="img-b21">
+          <img src="imgs/marcus-p-oUBjd22gF6w-unsplash.jpg" alt="picture of a car by marcus p">
           </div>
-          <div class="carousel_item" id="img-c2">
-            <img src="imgs/jonathan-riley-VW8MUbHyxCU-unsplash.jpg" alt="Photo of city scene by Jonathan Riley" />
+          <div class="carousel_item" id="img-c21">
+          <img src="imgs/joey-banks-YApiWyp0lqo-unsplash.jpg" alt="picture of a car by joey banks">
           </div>
-          <div class="carousel_item" id="img-d2">
-            <img src="imgs/jonathan-roger-LY1eyQMFeyo-unsplash.jpg" alt="Photo of city scene by Jonathan Roger" />
+          <div class="carousel_item" id="img-d21">
+          <img src="imgs/lance-asper-N9Pf2J656aQ-unsplash.jpg" alt="picture of a car by lance asper">
           </div>
-          <div class="carousel_item" id="img-e2">
-            <img src="imgs/chuttersnap-ZRFzHWwGm3g-unsplash.jpg" alt="Photo of city scene by Chuttersnap" />
-            </div>
-            <div class="carousel_item" id="img-f2">
-            <img src="imgs/a-k-kNG1xaJklfA-unsplash.jpg" alt="Photo of city scene by @djluvrocks" />
-            </div>
-            <div class="carousel_item" id="img-g2">
-            <img src="imgs/lance-anderson-PcCQgQ6KGkI-unsplash.jpg" alt="Photo of city scene by Lance Anderson" />
-            </div>
-            <div class="carousel_item" id="img-h2">
-            <img src="imgs/anthony-intraversato-xr43RescWSA-unsplash.jpg" alt="Photo of city scene by Anthony Intraversato" />
-            </div>
-        </div>
-      </div>
-    </div>
+          <div class="carousel_item" id="img-e21">
+          <img src="imgs/john-vicente-CMzmQNU-DGE-unsplash.jpg" alt="picture of a car by john vicente">
+          </div>
+          <div class="carousel_item" id="img-f21">
+          <img src="imgs/benjamin-child-7Cdw956mZ4w-unsplash.jpg" alt="picture of a car by benjamin child">
+          </div>
+          <div class="carousel_item" id="img-g21">
+          <img src="imgs/matt-antonioli-3akA0XDg1_g-unsplash.jpg" alt="picture of a car by matt antonioli">
+          </div>
+              </div>
+              </div>
+          </div>
     <div class="carousel_nav carousel_nav-dots">
-          <a href="#img-a2">Scroll carousel to slide 1 of 8</a>
-          <a href="#img-b2">Scroll carousel to slide 2 of 8</a>
-          <a href="#img-c2">Scroll carousel to slide 3 of 8</a>
-          <a href="#img-d2">Scroll carousel to slide 4 of 8</a>
-          <a href="#img-e2">Scroll carousel to slide 5 of 8</a>
-          <a href="#img-f2">Scroll carousel to slide 6 of 8</a>
-          <a href="#img-g2">Scroll carousel to slide 7 of 8</a>
-          <a href="#img-h2">Scroll carousel to slide 8 of 8</a>
+          <a href="#img-a21">Scroll carousel to slide 1 of 8</a>
+          <a href="#img-b21">Scroll carousel to slide 2 of 8</a>
+          <a href="#img-c21">Scroll carousel to slide 3 of 8</a>
+          <a href="#img-d21">Scroll carousel to slide 4 of 8</a>
+          <a href="#img-e21">Scroll carousel to slide 5 of 8</a>
+          <a href="#img-f21">Scroll carousel to slide 6 of 8</a>
+          <a href="#img-g21">Scroll carousel to slide 7 of 8</a>
         </div>
   </fg-carousel>
 
