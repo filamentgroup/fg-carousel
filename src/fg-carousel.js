@@ -335,8 +335,8 @@ class carousel extends HTMLElement {
 		}
 		// internal links to slides
 		else if( parentAnchor ){
-			e.preventDefault();
-			self.goto( parentAnchor.getAttribute("href") );
+			//e.preventDefault();
+			//self.goto( parentAnchor.getAttribute("href") );
 		}
 	}
 

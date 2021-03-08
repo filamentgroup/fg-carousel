@@ -32,6 +32,7 @@
 
 .carousel_pane {
   overflow: auto;
+  scroll-behavior: smooth;
   width: 100%;
   /* keep old API for iOS older than 13, then use new API */
   -webkit-overflow-scrolling: touch;

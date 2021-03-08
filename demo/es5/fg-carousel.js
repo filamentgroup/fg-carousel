@@ -399,9 +399,8 @@ var carousel = /*#__PURE__*/function (_HTMLElement) {
         e.preventDefault();
         return self.arrowNavigate(false);
       } // internal links to slides
-      else if (parentAnchor) {
-          e.preventDefault();
-          self["goto"](parentAnchor.getAttribute("href"));
+      else if (parentAnchor) {//e.preventDefault();
+          //self.goto( parentAnchor.getAttribute("href") );
         }
     }
   }, {
@@ -412,6 +411,7 @@ var carousel = /*#__PURE__*/function (_HTMLElement) {
 
       if (currentActive) {
         var autoTiming = currentActive.getAttribute("data-carousel-autoplay") || this.autoplayAttr;
+        console.log(autoTiming);
 
         if (autoTiming !== null) {
           if (autoTiming) {
