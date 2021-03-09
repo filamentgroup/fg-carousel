@@ -3,6 +3,7 @@ const babel = require('gulp-babel');
 
 function copy() {
    return src([
+    'node_modules/wicg-inert/dist/inert.js', 
     'node_modules/document-register-element/build/document-register-element.js', 
     'node_modules/intersection-observer/intersection-observer.js'
     ])

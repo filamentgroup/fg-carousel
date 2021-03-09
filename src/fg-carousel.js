@@ -37,10 +37,7 @@ class carousel extends HTMLElement {
 		if( this.paginated ){
 			this.manageDynamicNav();
 		}
-		
-		this.slider.setAttribute("tabindex",0);
-		this.slider.setAttribute("aria-orientation", "horizontal");
-		this.slider.setAttribute("role", "region" );
+
 		this.bindEvents();
 
 		this.dispatchEvent( this.initEvent );
@@ -74,8 +71,8 @@ class carousel extends HTMLElement {
 		var	nextprev = document.createElement( "ul" );
 		nextprev.classList.add("carousel_nextprev");
 		nextprev.innerHTML = `
-			<li class="carousel_nextprev_item"><button class="carousel_nextprev_prev">Prev</button></li>
-			<li class="carousel_nextprev_item"><button class="carousel_nextprev_next">Next</button></li>
+			<li class="carousel_nextprev_item"><button class="carousel_nextprev_prev">Navigate to Previous Tab</button></li>
+			<li class="carousel_nextprev_item"><button class="carousel_nextprev_next">Navigate to Next Tab</button></li>
 		`;
 		var nextprevContain = this.querySelector( "." + this.pluginName + "_nextprev_contain" );
 		if( !nextprevContain ){
@@ -88,6 +85,9 @@ class carousel extends HTMLElement {
 		this.classList.add( this.pluginName );
 		this.slider = this.querySelector( ".carousel_pane" );
 		this.nav = this.querySelector( ".carousel_nav" );
+		if( this.nav ){
+			this.nav.setAttribute('role', 'tablist');
+		}
 		this.nextprev = this.querySelector( ".carousel_nextprev" );
 	}
 
@@ -100,9 +100,21 @@ class carousel extends HTMLElement {
 			var entryNavLink = parentElem.querySelector( "a[href='#" + entry.target.id + "']" );
 			if (entry.isIntersecting && entry.intersectionRatio >= .75 ) {
 				entry.target.classList.add( self.activeItemClass );
+				entry.target.setAttribute("role", 'tabpanel');
+				entry.target.setAttribute("tabindex", '0');
+				entry.target.setAttribute("aria-hidden", 'false');
+				entry.target.inert = false;
+				let panelId = entry.target.getAttribute('id');
+				let tabId = panelId + "-tab";
+				entry.target.setAttribute("aria-labelledby", tabId);
+				
 				entry.target.dispatchEvent( self.activeEvent );
 				if( navElem && entryNavLink ){
 					entryNavLink.classList.add( self.navActiveClass );
+					entryNavLink.setAttribute("role", "tab");
+					entryNavLink.setAttribute("tabindex", "0");
+					entryNavLink.setAttribute("id", tabId);
+					entryNavLink.setAttribute("aria-controls", panelId );
 					if( navElem.scrollTo ){
 						navElem.scrollTo({ left: entryNavLink.offsetLeft, behavior: "smooth" });
 					}
@@ -113,9 +125,20 @@ class carousel extends HTMLElement {
 			}
 			else {
 				entry.target.classList.remove( self.pluginName + "_item-active" );
+				entry.target.setAttribute("role", 'tabpanel');
+				entry.target.setAttribute("tabindex", '-1');
+				entry.target.setAttribute("aria-hidden", 'true');
+				entry.target.inert = true;
+				let panelId = entry.target.getAttribute('id');
+				let tabId = panelId + "-tab";
+				entry.target.setAttribute("aria-labelledby", tabId);
 				entry.target.dispatchEvent( self.inActiveEvent );
 				if( entryNavLink ){
 					entryNavLink.classList.remove( self.navActiveClass );
+					entryNavLink.setAttribute("role", "tab");
+					entryNavLink.setAttribute("aria-controls", panelId );
+					entryNavLink.setAttribute("tabindex", "-1" );
+					entryNavLink.setAttribute("id", tabId);
 				}
 			}
 		});
@@ -335,8 +358,9 @@ class carousel extends HTMLElement {
 		}
 		// internal links to slides
 		else if( parentAnchor ){
-			//e.preventDefault();
-			//self.goto( parentAnchor.getAttribute("href") );
+			e.preventDefault();
+			self.goto( parentAnchor.getAttribute("href") );
+			this.querySelector( parentAnchor.getAttribute("href") ).focus();
 		}
 	}
 
@@ -365,6 +389,7 @@ class carousel extends HTMLElement {
 
 	goto(item, parent, callback){
 		var slide;
+		var focused = document.activeElement;
 		if( !parent ){
 			parent = this.slider;
 		}
@@ -382,6 +407,9 @@ class carousel extends HTMLElement {
 		}
 		if( slide ){
 			parent.scrollTo({ left: slide.offsetLeft, behavior: "smooth" });
+			if( focused && focused.closest( ".carousel_nextprev, .carousel_items" ) ){
+				slide.focus();
+			}
 			if( callback ){
 				callback();
 			}
@@ -390,17 +418,30 @@ class carousel extends HTMLElement {
 	}
 
 	keydownHandler( e ){
+		var self = this;
 		if( e.keyCode === 37 || e.keyCode === 38 ){
 			this.stopAutoplay();
 			e.preventDefault();
 			e.stopImmediatePropagation();
 			this.arrowNavigate( false );
+			if( e.target.hasAttribute("role", 'tab') && e.target.previousElementSibling ){
+				e.target.previousElementSibling.focus();
+			}
+			else {
+				self.activeItems()[0].previousElementSibling.focus();
+			}
 		}
 		if( e.keyCode === 39 || e.keyCode === 40 ){
 			this.stopAutoplay();
 			e.preventDefault();
 			e.stopImmediatePropagation();
 			this.arrowNavigate( true );
+			if( e.target.hasAttribute("role", 'tab') && e.target.nextElementSibling ){
+				e.target.nextElementSibling.focus();
+			}
+			else {
+				self.activeItems()[0].nextElementSibling.focus();
+			}
 		}
 	}
 	

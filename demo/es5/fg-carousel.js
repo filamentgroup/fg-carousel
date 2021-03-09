@@ -139,6 +139,11 @@ var carousel = /*#__PURE__*/function (_HTMLElement) {
       this.classList.add(this.pluginName);
       this.slider = this.querySelector(".carousel_pane");
       this.nav = this.querySelector(".carousel_nav");
+
+      if (this.nav) {
+        this.nav.setAttribute('role', 'tablist');
+      }
+
       this.nextprev = this.querySelector(".carousel_nextprev");
     }
   }, {
@@ -152,10 +157,21 @@ var carousel = /*#__PURE__*/function (_HTMLElement) {
 
         if (entry.isIntersecting && entry.intersectionRatio >= .75) {
           entry.target.classList.add(self.activeItemClass);
+          entry.target.setAttribute("role", 'tabpanel');
+          entry.target.setAttribute("tabindex", '0');
+          entry.target.setAttribute("aria-hidden", 'false');
+          entry.target.inert = false;
+          var panelId = entry.target.getAttribute('id');
+          var tabId = panelId + "-tab";
+          entry.target.setAttribute("aria-labelledby", tabId);
           entry.target.dispatchEvent(self.activeEvent);
 
           if (navElem && entryNavLink) {
             entryNavLink.classList.add(self.navActiveClass);
+            entryNavLink.setAttribute("role", "tab");
+            entryNavLink.setAttribute("tabindex", "0");
+            entryNavLink.setAttribute("id", tabId);
+            entryNavLink.setAttribute("aria-controls", panelId);
 
             if (navElem.scrollTo) {
               navElem.scrollTo({
@@ -168,10 +184,24 @@ var carousel = /*#__PURE__*/function (_HTMLElement) {
           }
         } else {
           entry.target.classList.remove(self.pluginName + "_item-active");
+          entry.target.setAttribute("role", 'tabpanel');
+          entry.target.setAttribute("tabindex", '-1');
+          entry.target.setAttribute("aria-hidden", 'true');
+          entry.target.inert = true;
+
+          var _panelId = entry.target.getAttribute('id');
+
+          var _tabId = _panelId + "-tab";
+
+          entry.target.setAttribute("aria-labelledby", _tabId);
           entry.target.dispatchEvent(self.inActiveEvent);
 
           if (entryNavLink) {
             entryNavLink.classList.remove(self.navActiveClass);
+            entryNavLink.setAttribute("role", "tab");
+            entryNavLink.setAttribute("aria-controls", _panelId);
+            entryNavLink.setAttribute("tabindex", "-1");
+            entryNavLink.setAttribute("id", _tabId);
           }
         }
       });
@@ -399,8 +429,10 @@ var carousel = /*#__PURE__*/function (_HTMLElement) {
         e.preventDefault();
         return self.arrowNavigate(false);
       } // internal links to slides
-      else if (parentAnchor) {//e.preventDefault();
-          //self.goto( parentAnchor.getAttribute("href") );
+      else if (parentAnchor) {
+          e.preventDefault();
+          self["goto"](parentAnchor.getAttribute("href"));
+          this.querySelector(parentAnchor.getAttribute("href")).focus();
         }
     }
   }, {
@@ -463,11 +495,19 @@ var carousel = /*#__PURE__*/function (_HTMLElement) {
   }, {
     key: "keydownHandler",
     value: function keydownHandler(e) {
+      var self = this;
+
       if (e.keyCode === 37 || e.keyCode === 38) {
         this.stopAutoplay();
         e.preventDefault();
         e.stopImmediatePropagation();
         this.arrowNavigate(false);
+
+        if (e.target.hasAttribute("role", 'tab') && e.target.previousElementSibling) {
+          e.target.previousElementSibling.focus();
+        } else {
+          self.activeItems()[0].previousElementSibling.focus();
+        }
       }
 
       if (e.keyCode === 39 || e.keyCode === 40) {
@@ -475,6 +515,12 @@ var carousel = /*#__PURE__*/function (_HTMLElement) {
         e.preventDefault();
         e.stopImmediatePropagation();
         this.arrowNavigate(true);
+
+        if (e.target.hasAttribute("role", 'tab') && e.target.nextElementSibling) {
+          e.target.nextElementSibling.focus();
+        } else {
+          self.activeItems()[0].nextElementSibling.focus();
+        }
       }
     } // next/prev links or arrows should loop back to the other end when an extreme is reached
 
