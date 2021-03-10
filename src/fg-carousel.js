@@ -374,7 +374,7 @@ class carousel extends HTMLElement {
 		var self = this;
 		if(currentActive){
 			var autoTiming = currentActive.getAttribute( "data-carousel-autoplay" ) || this.autoplayAttr;
-			if( autoTiming !== null ){
+			if( autoTiming !== null && self.interacted ){
 				if( autoTiming ) {
 					var thisTime = parseInt(autoTiming, 10) || 5000;
 					self.autoTiming = setTimeout( function(){
