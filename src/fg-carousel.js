@@ -217,25 +217,24 @@ class carousel extends HTMLElement {
 
 		// keyboard arrows
 		this.addEventListener("keydown", function( e ){
-			self.keydownHandler( e );
 			self.interacted = true;
+			self.keydownHandler( e );
 		} );
 
 		// autoplay stops
 		this.addEventListener("click", function( e ){
-			self.stopAutoplay();
 			self.interacted = true;
+			self.stopAutoplay();
 		});
-		this.addEventListener("mouseenter", function( e ){
-			//self.stopAutoplay();
-		});
+		
+		
 		this.addEventListener("pointerdown", function( e ){
-			self.stopAutoplay();
 			self.interacted = true;
+			self.stopAutoplay();
 		});
 		this.addEventListener("focus", function( e ){
-			self.stopAutoplay();
 			self.interacted = true;
+			self.stopAutoplay();
 		});
 		this.slider.addEventListener( "focus", function(){
 			self.loopDisabled = true;
@@ -434,9 +433,9 @@ class carousel extends HTMLElement {
 				e.target.previousElementSibling.focus();
 			}
 			else {
-				//self.activeItems()[0].previousElementSibling.focus();
-				setTimeout(self.activeItems()[0].previousElementSibling.focus, 2000);
-
+				if( self.activeItems()[0].previousElementSibling ){
+					setTimeout(self.activeItems()[0].previousElementSibling.focus, 1000);
+				}
 			}
 		}
 		if( e.keyCode === 39 || e.keyCode === 40 ){
@@ -448,8 +447,9 @@ class carousel extends HTMLElement {
 				e.target.nextElementSibling.focus();
 			}
 			else {
-				//self.activeItems()[0].nextElementSibling.focus();
-				setTimeout(self.activeItems()[0].nextElementSibling.focus, 1000);
+				if( self.activeItems()[0].nextElementSibling ){
+					setTimeout(self.activeItems()[0].nextElementSibling.focus, 1000);
+				}
 			}
 		}
 	}

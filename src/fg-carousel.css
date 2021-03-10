@@ -16,9 +16,8 @@
   position: relative;
 }
 
-.carousel:focus {
+.carousel_item:focus {
   /* carousel div receives a tabindex to allow focus for keyboard arrow control */
-  outline: none;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -221,7 +220,7 @@
 }
 .carousel_nav-dots a.carousel_nav_item-selected {
   background: #111;
-  box-shadow: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   border: none;
   outline: none;
 }
