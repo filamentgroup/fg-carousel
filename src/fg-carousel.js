@@ -100,10 +100,10 @@ class carousel extends HTMLElement {
 			var entryNavLink = parentElem.querySelector( "a[href='#" + entry.target.id + "']" );
 			if (entry.isIntersecting && entry.intersectionRatio >= .75 ) {
 				entry.target.classList.add( self.activeItemClass );
+				entry.target.inert = false;
 				entry.target.setAttribute("role", 'tabpanel');
 				entry.target.setAttribute("tabindex", '0');
 				entry.target.setAttribute("aria-hidden", 'false');
-				entry.target.inert = false;
 				let panelId = entry.target.getAttribute('id');
 				let tabId = panelId + "-tab";
 				entry.target.setAttribute("aria-labelledby", tabId);
@@ -126,9 +126,9 @@ class carousel extends HTMLElement {
 			else {
 				entry.target.classList.remove( self.pluginName + "_item-active" );
 				entry.target.setAttribute("role", 'tabpanel');
+				entry.target.inert = true;
 				entry.target.setAttribute("tabindex", '-1');
 				entry.target.setAttribute("aria-hidden", 'true');
-				entry.target.inert = true;
 				let panelId = entry.target.getAttribute('id');
 				let tabId = panelId + "-tab";
 				entry.target.setAttribute("aria-labelledby", tabId);
