@@ -374,7 +374,7 @@ class carousel extends HTMLElement {
 		var self = this;
 		if(currentActive){
 			var autoTiming = currentActive.getAttribute( "data-carousel-autoplay" ) || this.autoplayAttr;
-			if( autoTiming !== null && self.interacted ){
+			if( autoTiming !== null ){
 				if( autoTiming ) {
 					var thisTime = parseInt(autoTiming, 10) || 5000;
 					self.autoTiming = setTimeout( function(){
@@ -410,7 +410,7 @@ class carousel extends HTMLElement {
 		}
 		if( slide ){
 			parent.scrollTo({ left: slide.offsetLeft, behavior: "smooth" });
-			if( self.interacted && focused && focused.closest( ".carousel_nextprev, .carousel_items" ) || document.activeElement === document.body ){
+			if( self.interacted && (focused && focused.closest( ".carousel_nextprev, .carousel_items" ) || document.activeElement === document.body ) ){
 				setTimeout(function(){
 					slide.focus();
 				}, 1000);
