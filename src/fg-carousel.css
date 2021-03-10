@@ -1,9 +1,14 @@
 /* carousel css snap points carousel */
 .carousel {
   display: block;
+  display: flex;
+  flex-flow: column;
 }
 .carousel * {
   box-sizing: border-box;
+}
+.carousel_nav {
+  order: 2;
 }
 
 .carousel,
