@@ -71,8 +71,8 @@ class carousel extends HTMLElement {
 		var	nextprev = document.createElement( "ul" );
 		nextprev.classList.add("carousel_nextprev");
 		nextprev.innerHTML = `
-			<li class="carousel_nextprev_item"><button class="carousel_nextprev_prev" title="Select Previous Tab"></button></li>
-			<li class="carousel_nextprev_item"><button class="carousel_nextprev_next" title="Select Next Tab"></button></li>
+			<li class="carousel_nextprev_item"><button class="carousel_nextprev_prev" title="Activate Previous Tab"></button></li>
+			<li class="carousel_nextprev_item"><button class="carousel_nextprev_next" title="Activate Next Tab"></button></li>
 		`;
 		var nextprevContain = this.querySelector( "." + this.pluginName + "_nextprev_contain" );
 		if( !nextprevContain ){
@@ -407,9 +407,9 @@ class carousel extends HTMLElement {
 		}
 		if( slide ){
 			parent.scrollTo({ left: slide.offsetLeft, behavior: "smooth" });
-			if( focused && focused.closest( ".carousel_nextprev, .carousel_items" ) ){
-				setTimeout(slide.focus, 1000);
-			}
+			// if( focused && focused.closest( ".carousel_nextprev, .carousel_items" ) ){
+			// 	setTimeout(slide.focus, 1000);
+			// }
 			if( callback ){
 				callback();
 			}
@@ -425,12 +425,11 @@ class carousel extends HTMLElement {
 			e.stopImmediatePropagation();
 			this.arrowNavigate( false );
 			if( e.target.hasAttribute("role", 'tab') && e.target.previousElementSibling ){
-				//e.target.previousElementSibling.focus();
-				setTimeout(e.target.previousElementSibling.focus, 1000);
+				e.target.previousElementSibling.focus();
 			}
 			else {
 				//self.activeItems()[0].previousElementSibling.focus();
-				setTimeout(self.activeItems()[0].previousElementSibling.focus, 1000);
+				setTimeout(self.activeItems()[0].previousElementSibling.focus, 2000);
 
 			}
 		}
@@ -440,8 +439,7 @@ class carousel extends HTMLElement {
 			e.stopImmediatePropagation();
 			this.arrowNavigate( true );
 			if( e.target.hasAttribute("role", 'tab') && e.target.nextElementSibling ){
-				//e.target.nextElementSibling.focus();
-				setTimeout(e.target.previousElementSibling.focus, 1000);
+				e.target.nextElementSibling.focus();
 			}
 			else {
 				//self.activeItems()[0].nextElementSibling.focus();
