@@ -20,6 +20,7 @@ class carousel extends HTMLElement {
 		this.initEvent = this.makeEvent("init");
 		this.activeEvent = this.makeEvent("active");
 		this.inActiveEvent = this.makeEvent("inactive");
+		this.interacted = false;
 
 		this.idItems();
 		this.observeItems();
@@ -211,25 +212,30 @@ class carousel extends HTMLElement {
 		// clicks for thumbs, nav
 		this.addEventListener("click", function( e ){
 			self.handleClick( e );
+			self.interacted = true;
 		} );
 
 		// keyboard arrows
 		this.addEventListener("keydown", function( e ){
 			self.keydownHandler( e );
+			self.interacted = true;
 		} );
 
 		// autoplay stops
 		this.addEventListener("click", function( e ){
 			self.stopAutoplay();
+			self.interacted = true;
 		});
 		this.addEventListener("mouseenter", function( e ){
 			//self.stopAutoplay();
 		});
 		this.addEventListener("pointerdown", function( e ){
 			self.stopAutoplay();
+			self.interacted = true;
 		});
 		this.addEventListener("focus", function( e ){
 			self.stopAutoplay();
+			self.interacted = true;
 		});
 		this.slider.addEventListener( "focus", function(){
 			self.loopDisabled = true;
@@ -360,7 +366,6 @@ class carousel extends HTMLElement {
 		else if( parentAnchor ){
 			e.preventDefault();
 			self.goto( parentAnchor.getAttribute("href") );
-			//this.querySelector( parentAnchor.getAttribute("href") ).focus();
 		}
 	}
 
@@ -406,7 +411,7 @@ class carousel extends HTMLElement {
 		}
 		if( slide ){
 			parent.scrollTo({ left: slide.offsetLeft, behavior: "smooth" });
-			if( focused && focused.closest( ".carousel_nextprev, .carousel_items" ) || document.activeElement === document.body ){
+			if( self.interacted && focused && focused.closest( ".carousel_nextprev, .carousel_items" ) || document.activeElement === document.body ){
 				setTimeout(function(){
 					slide.focus();
 				}, 1000);
