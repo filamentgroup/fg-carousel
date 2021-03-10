@@ -360,7 +360,7 @@ class carousel extends HTMLElement {
 		else if( parentAnchor ){
 			e.preventDefault();
 			self.goto( parentAnchor.getAttribute("href") );
-			this.querySelector( parentAnchor.getAttribute("href") ).focus();
+			//this.querySelector( parentAnchor.getAttribute("href") ).focus();
 		}
 	}
 
@@ -408,7 +408,7 @@ class carousel extends HTMLElement {
 		if( slide ){
 			parent.scrollTo({ left: slide.offsetLeft, behavior: "smooth" });
 			if( focused && focused.closest( ".carousel_nextprev, .carousel_items" ) ){
-				slide.focus();
+				setTimeout(slide.focus, 1000);
 			}
 			if( callback ){
 				callback();
@@ -425,10 +425,13 @@ class carousel extends HTMLElement {
 			e.stopImmediatePropagation();
 			this.arrowNavigate( false );
 			if( e.target.hasAttribute("role", 'tab') && e.target.previousElementSibling ){
-				e.target.previousElementSibling.focus();
+				//e.target.previousElementSibling.focus();
+				setTimeout(e.target.previousElementSibling.focus, 1000);
 			}
 			else {
-				self.activeItems()[0].previousElementSibling.focus();
+				//self.activeItems()[0].previousElementSibling.focus();
+				setTimeout(self.activeItems()[0].previousElementSibling.focus, 1000);
+
 			}
 		}
 		if( e.keyCode === 39 || e.keyCode === 40 ){
@@ -437,10 +440,12 @@ class carousel extends HTMLElement {
 			e.stopImmediatePropagation();
 			this.arrowNavigate( true );
 			if( e.target.hasAttribute("role", 'tab') && e.target.nextElementSibling ){
-				e.target.nextElementSibling.focus();
+				//e.target.nextElementSibling.focus();
+				setTimeout(e.target.previousElementSibling.focus, 1000);
 			}
 			else {
-				self.activeItems()[0].nextElementSibling.focus();
+				//self.activeItems()[0].nextElementSibling.focus();
+				setTimeout(self.activeItems()[0].nextElementSibling.focus, 1000);
 			}
 		}
 	}
