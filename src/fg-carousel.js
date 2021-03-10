@@ -71,8 +71,8 @@ class carousel extends HTMLElement {
 		var	nextprev = document.createElement( "ul" );
 		nextprev.classList.add("carousel_nextprev");
 		nextprev.innerHTML = `
-			<li class="carousel_nextprev_item"><button class="carousel_nextprev_prev">Navigate to Previous Tab</button></li>
-			<li class="carousel_nextprev_item"><button class="carousel_nextprev_next">Navigate to Next Tab</button></li>
+			<li class="carousel_nextprev_item"><button class="carousel_nextprev_prev" title="Select Previous Tab"></button></li>
+			<li class="carousel_nextprev_item"><button class="carousel_nextprev_next" title="Select Next Tab"></button></li>
 		`;
 		var nextprevContain = this.querySelector( "." + this.pluginName + "_nextprev_contain" );
 		if( !nextprevContain ){

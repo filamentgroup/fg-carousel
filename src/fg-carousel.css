@@ -151,6 +151,22 @@
   border: 1px solid #eee;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
+.carousel_nextprev_next:before,
+.carousel_nextprev_prev:before {
+  content: "";
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  border-right: 4px solid currentColor;
+  border-bottom: 4px solid currentColor;
+  transform: rotate(-45deg);
+  transform-origin: 0 0;
+  margin-left: calc(-1em + -2px);
+}
+.carousel_nextprev_prev:before {
+  transform: rotate(135deg);
+  margin-left:calc( 1em + 2px);
+}
 .carousel_nextprev_next:not(.carousel_nextprev-disabled),
 .carousel_nextprev_prev:not(.carousel_nextprev-disabled) {
   opacity: 0.8;
