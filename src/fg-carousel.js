@@ -433,8 +433,9 @@ class carousel extends HTMLElement {
 				e.target.previousElementSibling.focus();
 			}
 			else {
-				if( self.activeItems()[0].previousElementSibling ){
-					setTimeout(self.activeItems()[0].previousElementSibling.focus, 1000);
+				var nextSlide = self.activeItems()[0].previousElementSibling;
+				if( nextSlide ){
+					setTimeout(nextSlide.focus, 1000);
 				}
 			}
 		}
@@ -447,8 +448,9 @@ class carousel extends HTMLElement {
 				e.target.nextElementSibling.focus();
 			}
 			else {
-				if( self.activeItems()[0].nextElementSibling ){
-					setTimeout(self.activeItems()[0].nextElementSibling.focus, 1000);
+				var nextSlide = self.activeItems()[0].nextElementSibling;
+				if( nextSlide ){
+					setTimeout(nextSlide.focus, 1000);
 				}
 			}
 		}
