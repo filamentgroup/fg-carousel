@@ -370,7 +370,6 @@ class carousel extends HTMLElement {
 		var self = this;
 		if(currentActive){
 			var autoTiming = currentActive.getAttribute( "data-carousel-autoplay" ) || this.autoplayAttr;
-			console.log(autoTiming)
 			if( autoTiming !== null ){
 				if( autoTiming ) {
 					var thisTime = parseInt(autoTiming, 10) || 5000;
@@ -407,9 +406,11 @@ class carousel extends HTMLElement {
 		}
 		if( slide ){
 			parent.scrollTo({ left: slide.offsetLeft, behavior: "smooth" });
-			// if( focused && focused.closest( ".carousel_nextprev, .carousel_items" ) ){
-			// 	setTimeout(slide.focus, 1000);
-			// }
+			if( focused && focused.closest( ".carousel_nextprev, .carousel_items" ) || document.activeElement === document.body ){
+				setTimeout(function(){
+					slide.focus();
+				}, 1000);
+			}
 			if( callback ){
 				callback();
 			}
