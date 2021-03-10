@@ -429,13 +429,13 @@ class carousel extends HTMLElement {
 			e.preventDefault();
 			e.stopImmediatePropagation();
 			this.arrowNavigate( false );
-			if( e.target.hasAttribute("role", 'tab') && e.target.previousElementSibling ){
+			if( e.target.hasAttribute("role", 'tab') && e.target.previousElementSibling && self.interacted ){
 				e.target.previousElementSibling.focus();
 			}
 			else {
-				var nextSlide = self.activeItems()[0].previousElementSibling;
-				if( nextSlide ){
-					setTimeout(nextSlide.focus, 1000);
+				var prevSlide = self.activeItems()[0].previousElementSibling;
+				if( prevSlide && self.interacted ){
+					setTimeout(prevSlide.focus, 1000);
 				}
 			}
 		}
@@ -444,12 +444,12 @@ class carousel extends HTMLElement {
 			e.preventDefault();
 			e.stopImmediatePropagation();
 			this.arrowNavigate( true );
-			if( e.target.hasAttribute("role", 'tab') && e.target.nextElementSibling ){
+			if( e.target.hasAttribute("role", 'tab') && e.target.nextElementSibling && self.interacted ){
 				e.target.nextElementSibling.focus();
 			}
 			else {
 				var nextSlide = self.activeItems()[0].nextElementSibling;
-				if( nextSlide ){
+				if( nextSlide && self.interacted ){
 					setTimeout(nextSlide.focus, 1000);
 				}
 			}
