@@ -124,6 +124,16 @@ Quick links to examples:
   <p class="docs">You can have dots instead of thumbnails by adding the <code>carousel_nav-dots</code> class</p>
   <p class="docs">You can also set the attribute on carousel_item elements to get individual timing.</p>
   <fg-carousel data-carousel-nextprev>
+      <div class="carousel_nav carousel_nav-dots">
+          <a href="#img-a3b">Slide 1</a>
+          <a href="#img-b3b">Slide 2</a>
+          <a href="#img-c3b">Slide 3</a>
+          <a href="#img-d3b">Slide 4</a>
+          <a href="#img-e3b">Slide 5</a>
+          <a href="#img-f3b">Slide 6</a>
+          <a href="#img-g3b">Slide 7</a>
+          <a href="#img-h3b">Slide 8</a>
+      </div>
       <div class="carousel_nextprev_contain"><!-- optional wrapper to allow for next-prev arrows to relatively position to a direct wrapper of the slides -->
           <div class="carousel_pane" aria-label="Series of images of city scenes">
               <div class="carousel_items">
@@ -153,16 +163,6 @@ Quick links to examples:
             </div>
               </div>
               </div>
-          </div>
-          <div class="carousel_nav carousel_nav-dots">
-              <a href="#img-a3b">Slide 1</a>
-              <a href="#img-b3b">Slide 2</a>
-              <a href="#img-c3b">Slide 3</a>
-              <a href="#img-d3b">Slide 4</a>
-              <a href="#img-e3b">Slide 5</a>
-              <a href="#img-f3b">Slide 6</a>
-              <a href="#img-g3b">Slide 7</a>
-              <a href="#img-h3b">Slide 8</a>
           </div>
     </fg-carousel>
 
@@ -280,6 +280,16 @@ Quick links to examples:
 <p class="docs">If you set slides to a width that doesn't divide evenly in the visible viewport, you'll have slides that partially reveal, which can be a nice affordance to suggest to the user that there's more content to see. </p>
 
 <fg-carousel class="revealexample" data-carousel-nextprev="">
+    <div class="carousel_nav carousel_nav-dots">
+      <a href="#img-a4">Scroll carousel to slide 1 of 8</a>
+      <a href="#img-b4">Scroll carousel to slide 2 of 8</a>
+      <a href="#img-c4">Scroll carousel to slide 3 of 8</a>
+      <a href="#img-d4">Scroll carousel to slide 4 of 8</a>
+      <a href="#img-e4">Scroll carousel to slide 5 of 8</a>
+      <a href="#img-f4">Scroll carousel to slide 6 of 8</a>
+      <a href="#img-g4">Scroll carousel to slide 7 of 8</a>
+      <a href="#img-h4">Scroll carousel to slide 8 of 8</a>
+    </div>    
     <div class="carousel_nextprev_contain"><!-- optional wrapper to allow for next-prev arrows to relatively position to a direct wrapper of the slides -->
         <div class="carousel_pane" aria-label="Series of images of city scenes">
             <div class="carousel_items">
@@ -310,16 +320,6 @@ Quick links to examples:
             </div>
             </div>
         </div>
-        <div class="carousel_nav carousel_nav-dots">
-          <a href="#img-a4">Scroll carousel to slide 1 of 8</a>
-          <a href="#img-b4">Scroll carousel to slide 2 of 8</a>
-          <a href="#img-c4">Scroll carousel to slide 3 of 8</a>
-          <a href="#img-d4">Scroll carousel to slide 4 of 8</a>
-          <a href="#img-e4">Scroll carousel to slide 5 of 8</a>
-          <a href="#img-f4">Scroll carousel to slide 6 of 8</a>
-          <a href="#img-g4">Scroll carousel to slide 7 of 8</a>
-          <a href="#img-h4">Scroll carousel to slide 8 of 8</a>
-        </div>
 </fg-carousel>
 
 <h3 class="docs" id="css">CSS for this example</h3>
@@ -347,6 +347,15 @@ max-width: 100%;
 <p class="docs">This example is similar to prior examples that show multiple slides, but it has fixed-width slides, rather than slides that fill a percent of the viewport. It also uses dynamic pagination for thumbnails and arrows through the "data-carousel-paginated" attribute. Pagination will cause the thumbnails and arrows to treat the visible slides as one unit, advancing as a whole, which tends to work better for multiple slides. Regardless of whether widths are fixed or fluid, if the number of slides showing at any time varies such as in this example, the number of dots may change across breakpoints. Dynamic thumbnails highlight one "viewport" at a time.</p>
 
 <fg-carousel data-carousel-nextprev="" class="cars-example">
+    <div class="carousel_nav carousel_nav-dots">
+      <a href="#img-a2a">Scroll carousel to slide 1 of 8</a>
+      <a href="#img-b2a">Scroll carousel to slide 2 of 8</a>
+      <a href="#img-c2a">Scroll carousel to slide 3 of 8</a>
+      <a href="#img-d2a">Scroll carousel to slide 4 of 8</a>
+      <a href="#img-e2a">Scroll carousel to slide 5 of 8</a>
+      <a href="#img-f2a">Scroll carousel to slide 6 of 8</a>
+      <a href="#img-g2a">Scroll carousel to slide 7 of 8</a>
+    </div>
     <div class="carousel_nextprev_contain"><!-- optional wrapper to allow for next-prev arrows to relatively position to a direct wrapper of the slides -->
     <div class="carousel_pane" aria-label="Series of images of city scenes">
         <div class="carousel_items">
@@ -374,15 +383,6 @@ max-width: 100%;
               </div>
               </div>
           </div>
-    <div class="carousel_nav carousel_nav-dots">
-          <a href="#img-a2a">Scroll carousel to slide 1 of 8</a>
-          <a href="#img-b2a">Scroll carousel to slide 2 of 8</a>
-          <a href="#img-c2a">Scroll carousel to slide 3 of 8</a>
-          <a href="#img-d2a">Scroll carousel to slide 4 of 8</a>
-          <a href="#img-e2a">Scroll carousel to slide 5 of 8</a>
-          <a href="#img-f2a">Scroll carousel to slide 6 of 8</a>
-          <a href="#img-g2a">Scroll carousel to slide 7 of 8</a>
-        </div>
   </fg-carousel>
 
 <h3 class="docs" id="css">CSS for this example</h3>
@@ -401,6 +401,15 @@ max-width: 100%;
 <p class="docs">This example is similar to prior examples that show multiple slides, but it uses dynamic pagination for thumbnails and arrows through the "data-carousel-paginated" attribute. Pagination will cause the thumbnails and arrows to treat the visible slides as one unit, advancing as a whole, which tends to work better for multiple slides. The number of dots in the nav may change across breakpoints to match the number of "pages" that are visible.</p>
 
 <fg-carousel data-carousel-nextprev="" data-carousel-paginated class="breakpointsexample">
+    <div class="carousel_nav carousel_nav-dots">
+      <a href="#img-a20">Scroll carousel to slide 1 of 8</a>
+      <a href="#img-b20">Scroll carousel to slide 2 of 8</a>
+      <a href="#img-c20">Scroll carousel to slide 3 of 8</a>
+      <a href="#img-d20">Scroll carousel to slide 4 of 8</a>
+      <a href="#img-e20">Scroll carousel to slide 5 of 8</a>
+      <a href="#img-f20">Scroll carousel to slide 6 of 8</a>
+      <a href="#img-g20">Scroll carousel to slide 7 of 8</a>
+    </div>
     <div class="carousel_nextprev_contain"><!-- optional wrapper to allow for next-prev arrows to relatively position to a direct wrapper of the slides -->
     <div class="carousel_pane" aria-label="Series of images of city scenes">
         <div class="carousel_items">
@@ -428,15 +437,6 @@ max-width: 100%;
               </div>
               </div>
           </div>
-    <div class="carousel_nav carousel_nav-dots">
-          <a href="#img-a20">Scroll carousel to slide 1 of 8</a>
-          <a href="#img-b20">Scroll carousel to slide 2 of 8</a>
-          <a href="#img-c20">Scroll carousel to slide 3 of 8</a>
-          <a href="#img-d20">Scroll carousel to slide 4 of 8</a>
-          <a href="#img-e20">Scroll carousel to slide 5 of 8</a>
-          <a href="#img-f20">Scroll carousel to slide 6 of 8</a>
-          <a href="#img-g20">Scroll carousel to slide 7 of 8</a>
-        </div>
   </fg-carousel>
 
 
@@ -447,7 +447,17 @@ max-width: 100%;
 <p class="docs">By setting the <code>data-carousel-autoplay</code> attribute on the <code>fg-carousel</code> element to a natural number value carousel will automatically rotate through the images. The value represents a the millisecond delay between item transitions. In the example below we have <code>data-carousel-autoplay="4000"</code></p>
 <p class="docs">You can also set the attribute on carousel_item elements to get individual timing.</p>
 <fg-carousel data-carousel-nextprev data-carousel-autoplay="4000">
-    <div class="carousel_nextprev_contain"><!-- optional wrapper to allow for next-prev arrows to relatively position to a direct wrapper of the slides -->
+    <div class="carousel_nav">
+          <a href="#img-a3"><img src="imgs/thmb-andrea-cau-nV7GJmSq3zc-unsplash.jpg" alt="Scroll carousel to slide 1" /></a>
+          <a href="#img-b3"><img src="imgs/thmb-henning-witzel-ukvgqriuOgo-unsplash.jpg" alt="Scroll carousel to slide 2" /></a>
+          <a href="#img-c3"><img src="imgs/thmb-jonathan-riley-VW8MUbHyxCU-unsplash.jpg" alt="Scroll carousel to slide 3" /></a>
+          <a href="#img-d3"><img src="imgs/thmb-jonathan-roger-LY1eyQMFeyo-unsplash.jpg" alt="Scroll carousel to slide 4" /></a>
+          <a href="#img-e3"><img src="imgs/thumb-chuttersnap-ZRFzHWwGm3g-unsplash.jpg" alt="Scroll carousel to slide 5" /></a>
+          <a href="#img-f3"><img src="imgs/thumb-a-k-kNG1xaJklfA-unsplash.jpg" alt="Scroll carousel to slide 6" /></a>
+          <a href="#img-g3"><img src="imgs/thumb-lance-anderson-PcCQgQ6KGkI-unsplash.jpg" alt="Scroll carousel to slide 7" /></a>
+          <a href="#img-h3"><img src="imgs/thumb-anthony-intraversato-xr43RescWSA-unsplash.jpg" alt="Scroll carousel to slide 8" /></a>
+      </div>
+      <div class="carousel_nextprev_contain"><!-- optional wrapper to allow for next-prev arrows to relatively position to a direct wrapper of the slides -->
         <div class="carousel_pane" aria-label="Series of images of city scenes">
             <div class="carousel_items">
                 <div class="carousel_item" id="img-a3">
@@ -477,16 +487,6 @@ max-width: 100%;
             </div>
             </div>
         </div>
-        <div class="carousel_nav">
-          <a href="#img-a3"><img src="imgs/thmb-andrea-cau-nV7GJmSq3zc-unsplash.jpg" alt="Scroll carousel to slide 1" /></a>
-          <a href="#img-b3"><img src="imgs/thmb-henning-witzel-ukvgqriuOgo-unsplash.jpg" alt="Scroll carousel to slide 2" /></a>
-          <a href="#img-c3"><img src="imgs/thmb-jonathan-riley-VW8MUbHyxCU-unsplash.jpg" alt="Scroll carousel to slide 3" /></a>
-          <a href="#img-d3"><img src="imgs/thmb-jonathan-roger-LY1eyQMFeyo-unsplash.jpg" alt="Scroll carousel to slide 4" /></a>
-          <a href="#img-e3"><img src="imgs/thumb-chuttersnap-ZRFzHWwGm3g-unsplash.jpg" alt="Scroll carousel to slide 5" /></a>
-          <a href="#img-f3"><img src="imgs/thumb-a-k-kNG1xaJklfA-unsplash.jpg" alt="Scroll carousel to slide 6" /></a>
-          <a href="#img-g3"><img src="imgs/thumb-lance-anderson-PcCQgQ6KGkI-unsplash.jpg" alt="Scroll carousel to slide 7" /></a>
-          <a href="#img-h3"><img src="imgs/thumb-anthony-intraversato-xr43RescWSA-unsplash.jpg" alt="Scroll carousel to slide 8" /></a>
-      </div>
   </fg-carousel> 
 
 
