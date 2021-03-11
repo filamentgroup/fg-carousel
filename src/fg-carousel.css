@@ -29,6 +29,9 @@
     scrollbar-width: none;
   }
 }
+.carousel_pane {
+  scroll-behavior: smooth;
+}
 
 .carousel_pane::-webkit-scrollbar {
   display: none;

@@ -268,6 +268,7 @@ Quick links to examples:
 <style>
     .revealexample .carousel_item {
         width: 85%;
+        scroll-snap-align: center;
     }
     .revealexample .carousel_pane {
         scroll-snap-points-x: repeat(85%);
