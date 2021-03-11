@@ -220,7 +220,6 @@
 }
 .carousel_nav-dots a.carousel_nav_item-selected {
   background: #111;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   border: none;
-  outline: none;
+  box-shadow: none;
 }
