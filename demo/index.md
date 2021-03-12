@@ -25,7 +25,7 @@ Quick links to examples:
 
 
 <h2 class="docs" id="nextprev">Standard 1up Carousel with thumbnail and next/previous links.</h2>
-<p class="docs">This carousel starts with HTML containing slides with focusable (linked) content inside them and linked thumbnail navigation, which are regular anchor links to each slide's corresponding ID attribute. It also has next/prev links that are automatically added through the addition of a <code>data-carousel-nextprev</code> attribute.</p>
+<p class="docs">This carousel starts with HTML containing slides with focusable (linked) content inside them and linked thumbnail navigation, which are regular anchor links to each slide's corresponding ID attribute. (We suggest putting those first in the source order, if you include them.) It also has next/prev links that are automatically added through the addition of a <code>data-carousel-nextprev</code> attribute.</p>
 
 <fg-carousel data-carousel-nextprev="" class="marketing-example">
 <div class="carousel_nav">
@@ -561,12 +561,10 @@ Note: to support IE11, we have used Babel to create [a module-free version of th
 
 ## Methods and Events
 
-The carousel has several methods you can call on it. You can find these methods on the element itself. 
-
-- tbd 
+The carousel has several methods you can call on it, such as goto, next, prev. We're still refining this API so they'll be documented soon.
 
 The carousel has several events. 
-- tbd
+- Also tbd documentation
 
 ## Polyfills
 
