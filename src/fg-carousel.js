@@ -217,7 +217,6 @@ class carousel extends HTMLElement {
 
 		// keyboard arrows
 		this.addEventListener("keydown", function( e ){
-			self.interacted = true;
 			self.keydownHandler( e );
 		} );
 

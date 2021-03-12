@@ -65,6 +65,7 @@ var carousel = /*#__PURE__*/function (_HTMLElement) {
       this.initEvent = this.makeEvent("init");
       this.activeEvent = this.makeEvent("active");
       this.inActiveEvent = this.makeEvent("inactive");
+      this.interacted = false;
       this.idItems();
       this.observeItems();
       this.defineElems();
@@ -82,9 +83,6 @@ var carousel = /*#__PURE__*/function (_HTMLElement) {
         this.manageDynamicNav();
       }
 
-      this.slider.setAttribute("tabindex", 0);
-      this.slider.setAttribute("aria-orientation", "horizontal");
-      this.slider.setAttribute("role", "region");
       this.bindEvents();
       this.dispatchEvent(this.initEvent);
       this.autoplayAttr = this.getAttribute("data-carousel-autoplay");
@@ -124,7 +122,7 @@ var carousel = /*#__PURE__*/function (_HTMLElement) {
     value: function addNextPrev() {
       var nextprev = document.createElement("ul");
       nextprev.classList.add("carousel_nextprev");
-      nextprev.innerHTML = "\n\t\t\t<li class=\"carousel_nextprev_item\"><button class=\"carousel_nextprev_prev\">Prev</button></li>\n\t\t\t<li class=\"carousel_nextprev_item\"><button class=\"carousel_nextprev_next\">Next</button></li>\n\t\t";
+      nextprev.innerHTML = "\n\t\t\t<li class=\"carousel_nextprev_item\"><button class=\"carousel_nextprev_prev\" title=\"Activate Previous Tab\"></button></li>\n\t\t\t<li class=\"carousel_nextprev_item\"><button class=\"carousel_nextprev_next\" title=\"Activate Next Tab\"></button></li>\n\t\t";
       var nextprevContain = this.querySelector("." + this.pluginName + "_nextprev_contain");
 
       if (!nextprevContain) {
@@ -157,10 +155,10 @@ var carousel = /*#__PURE__*/function (_HTMLElement) {
 
         if (entry.isIntersecting && entry.intersectionRatio >= .75) {
           entry.target.classList.add(self.activeItemClass);
+          entry.target.inert = false;
           entry.target.setAttribute("role", 'tabpanel');
           entry.target.setAttribute("tabindex", '0');
           entry.target.setAttribute("aria-hidden", 'false');
-          entry.target.inert = false;
           var panelId = entry.target.getAttribute('id');
           var tabId = panelId + "-tab";
           entry.target.setAttribute("aria-labelledby", tabId);
@@ -185,9 +183,9 @@ var carousel = /*#__PURE__*/function (_HTMLElement) {
         } else {
           entry.target.classList.remove(self.pluginName + "_item-active");
           entry.target.setAttribute("role", 'tabpanel');
+          entry.target.inert = true;
           entry.target.setAttribute("tabindex", '-1');
           entry.target.setAttribute("aria-hidden", 'true');
-          entry.target.inert = true;
 
           var _panelId = entry.target.getAttribute('id');
 
@@ -282,6 +280,7 @@ var carousel = /*#__PURE__*/function (_HTMLElement) {
 
       this.addEventListener("click", function (e) {
         self.handleClick(e);
+        self.interacted = true;
       }); // keyboard arrows
 
       this.addEventListener("keydown", function (e) {
@@ -289,14 +288,15 @@ var carousel = /*#__PURE__*/function (_HTMLElement) {
       }); // autoplay stops
 
       this.addEventListener("click", function (e) {
+        self.interacted = true;
         self.stopAutoplay();
       });
-      this.addEventListener("mouseenter", function (e) {//self.stopAutoplay();
-      });
       this.addEventListener("pointerdown", function (e) {
+        self.interacted = true;
         self.stopAutoplay();
       });
       this.addEventListener("focus", function (e) {
+        self.interacted = true;
         self.stopAutoplay();
       });
       this.slider.addEventListener("focus", function () {
@@ -432,7 +432,6 @@ var carousel = /*#__PURE__*/function (_HTMLElement) {
       else if (parentAnchor) {
           e.preventDefault();
           self["goto"](parentAnchor.getAttribute("href"));
-          this.querySelector(parentAnchor.getAttribute("href")).focus();
         }
     }
   }, {
@@ -443,7 +442,6 @@ var carousel = /*#__PURE__*/function (_HTMLElement) {
 
       if (currentActive) {
         var autoTiming = currentActive.getAttribute("data-carousel-autoplay") || this.autoplayAttr;
-        console.log(autoTiming);
 
         if (autoTiming !== null) {
           if (autoTiming) {
@@ -465,6 +463,7 @@ var carousel = /*#__PURE__*/function (_HTMLElement) {
     key: "goto",
     value: function goto(item, parent, callback) {
       var slide;
+      var focused = document.activeElement;
 
       if (!parent) {
         parent = this.slider;
@@ -487,6 +486,12 @@ var carousel = /*#__PURE__*/function (_HTMLElement) {
           behavior: "smooth"
         });
 
+        if (self.interacted && (focused && focused.closest(".carousel_nextprev, .carousel_items") || document.activeElement === document.body)) {
+          setTimeout(function () {
+            slide.focus();
+          }, 1000);
+        }
+
         if (callback) {
           callback();
         }
@@ -503,10 +508,14 @@ var carousel = /*#__PURE__*/function (_HTMLElement) {
         e.stopImmediatePropagation();
         this.arrowNavigate(false);
 
-        if (e.target.hasAttribute("role", 'tab') && e.target.previousElementSibling) {
+        if (e.target.hasAttribute("role", 'tab') && e.target.previousElementSibling && self.interacted) {
           e.target.previousElementSibling.focus();
         } else {
-          self.activeItems()[0].previousElementSibling.focus();
+          var prevSlide = self.activeItems()[0].previousElementSibling;
+
+          if (prevSlide && self.interacted) {
+            setTimeout(prevSlide.focus, 1000);
+          }
         }
       }
 
@@ -516,10 +525,14 @@ var carousel = /*#__PURE__*/function (_HTMLElement) {
         e.stopImmediatePropagation();
         this.arrowNavigate(true);
 
-        if (e.target.hasAttribute("role", 'tab') && e.target.nextElementSibling) {
+        if (e.target.hasAttribute("role", 'tab') && e.target.nextElementSibling && self.interacted) {
           e.target.nextElementSibling.focus();
         } else {
-          self.activeItems()[0].nextElementSibling.focus();
+          var nextSlide = self.activeItems()[0].nextElementSibling;
+
+          if (nextSlide && self.interacted) {
+            setTimeout(nextSlide.focus, 1000);
+          }
         }
       }
     } // next/prev links or arrows should loop back to the other end when an extreme is reached
