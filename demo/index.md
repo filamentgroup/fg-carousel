@@ -327,6 +327,7 @@ Quick links to examples:
 <pre class="docs language-css"><code class="docs language-css">
   .revealexample .carousel_item {
   width: 85%;
+  scroll-snap-align: center;
   }
   .revealexample .carousel_pane {
   scroll-snap-points-x: repeat(85%);
@@ -341,6 +342,7 @@ Quick links to examples:
 .cars-example .carousel_item {
 width: 500px;
 max-width: 100%;
+scroll-snap-align: center;
 }
 </style>
 
@@ -392,6 +394,7 @@ max-width: 100%;
 .cars-example .carousel_item {
   width: 500px;
   max-width: 100%;
+  scroll-snap-align: center;
 }
   </code></pre>
 
@@ -542,12 +545,15 @@ Inside the carousel element, place one or more items that will become carousel i
 
 ## Including Scripts &amp; Styles
 
-The carousel has two dependencies, one for the Javascript and one for the CSS, which you can find in the `src` directory:
+The carousel has some dependencies, one for the Javascript and one for the CSS, which you can find in the `src` directory:
 
 ```html
-<script type="module" src="src/fg-carousel.js"></script>
-<script src="demo/es5/fg-carousel.js" defer nomodule></script>
-<link rel="stylesheet" href="src/fg-carousel.css">
+<script>this.customElements||document.write('<script src="./lib/document-register-element.js" defer><\x2fscript>');</script>
+<script src="./lib/intersection-observer.js" defer></script>
+<script src="../src/fg-carousel.js" type="module"></script>
+<script src="./es5/fg-carousel.js" defer nomodule></script>
+<script src="./lib/inert.js" defer></script>
+<link rel="stylesheet" href="../src/fg-carousel.css">
 ```
 
 Note: to support IE11, we have used Babel to create [a module-free version of the carousel](demo/es5/fg-carousel.js) in the `demo` directory, which is listed above using the module/nomodule pattern to only delivery to non-module browsers. 
@@ -568,3 +574,4 @@ To use the carousel in modern browsers, two polyfills are likely necessary (plea
 
 - Custom Elements: The `fg-carousel` element uses the standard HTML custom elements feature, which are well supported but need a polyfill in IE11 and older. This project references WebReflection's [Document Register Element](https://github.com/WebReflection/document-register-element) polyfill which can be found at [demo/lib/document-register-element.js](demo/lib/document-register-element.js). It should be loaded prior to the accessible carousel script. In our demo page we use the following pattern to load it, but you could package it with <script>this.customElements||document.write('<script src=".demo/lib/document-register-element.js"><\x2fscript>');</script>
 - Intersection Observer: The `fg-carousel` element uses the standard intersection observer API to detect visibility of elements in the scroll area. For support, this may need a polyfill. We've [included one in the demos](demo/lib/intersection-observer.js) for convenience, via `<script src="./demo/lib/intersection-observer.js" defer></script>`
+- Inert: The standard `inert` attribute (support currently includes Chrome and Edge) is used for disabling the rest of the slides that are not active, which helps ensure a clean "tabs" experience when the component is used with assistive tech. Browser support for `inert` is still improving so [WICG's Inert polyfill](https://github.com/WICG/inert) is listed as a dependency of this project and can be found in the [demo/inert.js](demo/inert.js) file. You can load it in a deferred or async manner as it is not used until the dialog is opened. Example: `<script src="./lib/inert.js" defer></script>`

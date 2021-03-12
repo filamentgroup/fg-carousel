@@ -79,7 +79,7 @@ class carousel extends HTMLElement {
 		if( !nextprevContain ){
 			nextprevContain = this;
 		}
-		nextprevContain.append( nextprev );
+		nextprevContain.insertBefore( nextprev, this.slider );
 	}
 
 	defineElems(){
