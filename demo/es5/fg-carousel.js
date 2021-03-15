@@ -90,7 +90,7 @@ var carousel = /*#__PURE__*/function (_HTMLElement) {
       if (this.autoplayAttr !== null) {
         setTimeout(function () {
           self.nextAutoplay();
-        });
+        }, 0);
       } // make sure changes to the item list are tracked
 
 
